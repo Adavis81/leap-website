@@ -93,7 +93,7 @@ export default function About() {
             Meet the Founder
           </h1>
           <p className="text-xl text-gray-200">
-            The experience behind Leap Transformation Services
+            The experience behind Leap
           </p>
         </div>
       </section>
