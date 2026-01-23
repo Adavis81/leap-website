@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function About() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -31,7 +36,54 @@ export default function About() {
               Contact Us
             </Link>
           </div>
+          {/* Mobile hamburger button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6 text-[#364f6b]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4">
+            <div className="flex flex-col gap-4">
+              <Link
+                href="/#services"
+                className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                href="/about"
+                className="text-[#3fc1c9] font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="/#contact"
+                className="bg-[#3fc1c9] text-white px-5 py-2 rounded-lg hover:bg-[#2ba5ad] transition-colors text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -67,7 +119,7 @@ export default function About() {
                 Adam Davis
               </h2>
               <p className="text-xl text-[#3fc1c9] font-medium mb-6">
-                Founder & Principal
+                Founder
               </p>
 
               <div className="space-y-4 text-lg text-gray-600">
