@@ -196,7 +196,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={200}>
                 <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl">
-                  From strategy to production
+                  Let the experts guide you.
                 </p>
               </FadeIn>
               <FadeIn delay={300}>
