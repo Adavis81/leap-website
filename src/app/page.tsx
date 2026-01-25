@@ -196,8 +196,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={200}>
                 <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl">
-                  From strategy to production. We help financial institutions harness the power of data
-                  and AI to drive transformation and create lasting competitive advantage.
+                  From strategy to production.
                 </p>
               </FadeIn>
               <FadeIn delay={300}>
