@@ -297,7 +297,7 @@ export default function Home() {
               },
             ].map((service, index) => (
               <FadeIn key={service.title} delay={index * 100}>
-                <div className="group bg-white p-10 rounded-2xl border border-gray-100 hover:border-[#3fc1c9]/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="group bg-white p-10 rounded-2xl border border-gray-100 hover:border-[#3fc1c9]/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#3fc1c9]/20 to-[#3fc1c9]/5 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-8 h-8 text-[#3fc1c9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {service.icon}
