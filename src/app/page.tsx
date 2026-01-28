@@ -28,12 +28,12 @@ function useInView() {
   return { ref, isInView };
 }
 
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const { ref, isInView } = useInView();
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
@@ -189,14 +189,14 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={100}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-                  Transform Your
-                  <span className="block text-[#3fc1c9]">Financial Services</span>
-                  With Data & AI
+                  <span className="block">Data & AI</span>
+                  <span className="block">that actually ships</span>
+                  <span className="block text-[#3fc1c9]">in Financial Services</span>
                 </h1>
               </FadeIn>
               <FadeIn delay={200}>
                 <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl">
-                  Let the experts guide you.
+                  Senior practitioners who design and deliver strategy-to-production data platforms, AI use cases, and governance—across asset management, banking, insurance, and private markets.
                 </p>
               </FadeIn>
               <FadeIn delay={300}>
@@ -258,42 +258,42 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 ),
                 title: "Data Strategy",
-                description: "Define your data vision, roadmap, and governance frameworks to maximize the value of your data assets.",
+                description: "Align your data vision, operating model, and governance to a clear roadmap—focused on measurable business outcomes and regulatory needs.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 ),
                 title: "AI Strategy",
-                description: "From ideation to opportunity evaluation and use case prioritization, we help you build an AI roadmap grounded in technical feasibility and measurable business value.",
+                description: "Identify and prioritize AI use cases, then build a pragmatic roadmap grounded in feasibility, controls, and measurable value.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                 ),
                 title: "Data Engineering",
-                description: "Design and implement modern data platforms and pipelines, including the selection and implementation of best-fit third-party applications that scale with your business needs.",
+                description: "Design and build modern data platforms and pipelines—integrating best-fit tools to scale securely and reliably with your business.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 ),
                 title: "Risk & Compliance",
-                description: "Navigate regulatory requirements with data-driven risk management, including AI risk and governance frameworks for generative and agentic AI.",
+                description: "Strengthen data and AI risk management with governance, controls, and regulatory-ready documentation—covering GenAI and emerging AI risks.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 ),
                 title: "Operating Model & Change",
-                description: "Design and implement target operating models for data and AI, including org structure, roles, governance, and change programs to ensure sustainable adoption.",
+                description: "Define the roles, processes, and ways of working to run data and AI sustainably—then drive adoption through structured change.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 ),
                 title: "Team Augmentation",
-                description: "Embed experienced data and AI professionals into your teams to accelerate delivery and build internal capabilities.",
+                description: "Embed senior data and AI practitioners into your team to accelerate delivery, uplift capability, and transfer knowledge.",
               },
             ].map((service, index) => (
               <FadeIn key={service.title} delay={index * 100}>
@@ -393,30 +393,30 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "Deep Industry Expertise",
-                description: "Investment Management & servicing, banking, private markets & insurance",
+                title: "Financial Services Data Expertise",
+                description: "Operating models, governance, and data platforms across asset management, banking, insurance, and private markets.",
               },
               {
-                title: "Senior Consultants",
-                description: "Industry-tested professionals (15+ years) delivering big-firm outcomes through a boutique model",
+                title: "Senior-by-Default Delivery",
+                description: "No leverage pyramid—your work is led and executed by experienced practitioners (15+ years).",
               },
               {
-                title: "Practitioners First",
-                description: "We build, not just advise. Hands-on delivery that works in the real world",
+                title: "Strategy-to-Production",
+                description: "We don't stop at decks: we design, build, and implement data platforms, controls, and AI solutions.",
               },
               {
-                title: "Measurable Outcomes",
-                description: "Agile delivery focused on results that matter to your business",
+                title: "Risk-Ready AI",
+                description: "Practical AI governance, model risk alignment, and controls for generative and agentic AI.",
               },
             ].map((item, index) => (
-              <FadeIn key={item.title} delay={index * 100}>
-                <div className="text-center p-8">
-                  <div className="w-16 h-16 bg-[#3fc1c9] rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <FadeIn key={item.title} delay={index * 100} className="h-full">
+                <div className="text-center p-8 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#3fc1c9] rounded-2xl flex items-center justify-center mx-auto mb-6 flex-shrink-0">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                  <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-center justify-center">{item.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{item.description}</p>
                 </div>
               </FadeIn>
