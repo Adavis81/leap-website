@@ -29,6 +29,9 @@ export default function About() {
             <Link href="/about" className="text-[#3fc1c9] font-medium">
               About
             </Link>
+            <Link href="/partners-clients" className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors">
+              Partners &amp; Clients
+            </Link>
             <Link
               href="/#contact"
               className="bg-[#3fc1c9] text-white px-5 py-2 rounded-lg hover:bg-[#2ba5ad] transition-colors"
@@ -73,6 +76,13 @@ export default function About() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link
+                href="/partners-clients"
+                className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Partners &amp; Clients
               </Link>
               <Link
                 href="/#contact"

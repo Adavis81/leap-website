@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 // Animation hook for fade-in on scroll
@@ -86,7 +87,7 @@ export default function Home() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
-          <a href="/" className="h-14">
+          <Link href="/" className="h-14">
             <Image
               src={scrolled ? "/images/logo-color.svg" : "/images/logo-white.svg"}
               alt="Leap Transformation Services"
@@ -95,7 +96,7 @@ export default function Home() {
               className="object-contain h-full w-auto transition-opacity duration-300"
               priority
             />
-          </a>
+          </Link>
           <div className="hidden md:flex items-center gap-10">
             <a
               href="#services"

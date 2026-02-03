@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 // Animation hook for fade-in on scroll
@@ -86,7 +87,7 @@ export default function Home() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
-          <a href="/" className="h-14">
+          <Link href="/" className="h-14">
             <Image
               src={scrolled ? "/images/logo-color.svg" : "/images/logo-white.svg"}
               alt="Leap Transformation Services"
@@ -95,7 +96,7 @@ export default function Home() {
               className="object-contain h-full w-auto transition-opacity duration-300"
               priority
             />
-          </a>
+          </Link>
           <div className="hidden md:flex items-center gap-10">
             <a
               href="#services"
@@ -121,6 +122,14 @@ export default function Home() {
             >
               Why Leap
             </a>
+            <Link
+              href="/partners-clients"
+              className={`font-medium transition-colors ${
+                scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
+              }`}
+            >
+              Partners &amp; Clients
+            </Link>
             <a
               href="#contact"
               className="bg-[#3fc1c9] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#2ba5ad] transition-all hover:shadow-lg"
@@ -159,6 +168,13 @@ export default function Home() {
               <a href="#why-leap" className="text-[#364f6b] font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 Why Leap
               </a>
+              <Link
+                href="/partners-clients"
+                className="text-[#364f6b] font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Partners &amp; Clients
+              </Link>
               <a
                 href="#contact"
                 className="bg-[#3fc1c9] text-white px-6 py-3 rounded-full font-medium text-center"
@@ -366,7 +382,27 @@ export default function Home() {
                       <span className="text-[#3fc1c9] font-bold text-lg">AD</span>
                     </div>
                     <div>
-                      <div className="font-semibold">Adam Davis</div>
+                      <div className="flex items-center gap-2">
+                        <div className="font-semibold">Adam Davis</div>
+                        <a
+                          href="https://www.linkedin.com/in/adam-davis9/"
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="Adam Davis on LinkedIn"
+                          className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/15 transition-colors"
+                        >
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="text-white/90"
+                            aria-hidden="true"
+                          >
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.266 2.37 4.266 5.455v6.288zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.814 20.452H3.861V9h2.953v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                          </svg>
+                        </a>
+                      </div>
                       <div className="text-gray-300 text-sm">Founder</div>
                     </div>
                   </div>

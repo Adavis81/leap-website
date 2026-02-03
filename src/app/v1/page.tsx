@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" className="h-16 overflow-hidden block">
+          <Link href="/" className="h-16 overflow-hidden block">
             <Image
               src="/images/logo-color.svg"
               alt="Leap Transformation Services"
@@ -48,14 +49,14 @@ export default function Home() {
               className="object-contain h-full w-auto"
               priority
             />
-          </a>
+          </Link>
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors">
               Services
             </a>
-            <a href="/about" className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors">
+            <Link href="/about" className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors">
               About
-            </a>
+            </Link>
             <a
               href="#contact"
               className="bg-[#3fc1c9] text-white px-5 py-2 rounded-lg hover:bg-[#2ba5ad] transition-colors"
@@ -94,13 +95,13 @@ export default function Home() {
               >
                 Services
               </a>
-              <a
+              <Link
                 href="/about"
                 className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </a>
+              </Link>
               <a
                 href="#contact"
                 className="bg-[#3fc1c9] text-white px-5 py-2 rounded-lg hover:bg-[#2ba5ad] transition-colors text-center"
