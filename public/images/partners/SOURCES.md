@@ -19,3 +19,4 @@ Note: Logos and wordmarks may be trademarked by their respective owners.
 - Edgbaston Investment Partners: `https://edgbastonip.com/images/logo.jpg`
 - Oppenheimer Funds (Invesco): `/Users/adamdavis/Desktop/Oppenheimer Funds.jpeg` (provided by user)
 - Western Asset Management: `/Users/adamdavis/Desktop/WAM.png` (provided by user)
+- Agentic Risks: `https://agenticrisks.com/wp-content/uploads/2025/11/Agentic-Risks-Logo-white-transp-05.svg`

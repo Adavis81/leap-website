@@ -228,6 +228,53 @@ export default function PartnersClientsPage() {
             <p className="text-gray-600 text-lg mb-8 max-w-3xl">
               A selection of organizations we&apos;ve supported.
             </p>
+
+            <div className="mb-10">
+              <div className="text-sm font-semibold tracking-wider uppercase text-[#3fc1c9] mb-3">
+                Strategic Partner
+              </div>
+              <a
+                href="https://agenticrisks.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex flex-col md:flex-row items-start md:items-center justify-between gap-8 rounded-3xl bg-gradient-to-br from-[#364f6b] to-[#2c3e50] p-8 md:p-10 text-white shadow-lg"
+                aria-label="Visit Agentic Risks"
+              >
+                <div className="flex items-center gap-6">
+                  <Image
+                    src="/images/partners/agentic-risks.svg"
+                    alt="Agentic Risks logo"
+                    width={240}
+                    height={64}
+                    className="h-12 w-auto object-contain"
+                    unoptimized
+                  />
+                  <div className="hidden md:block w-px h-10 bg-white/20" aria-hidden="true" />
+                  <div className="max-w-xl">
+                    <div className="text-lg font-semibold">Agentic AI Controls Framework</div>
+                    <div className="text-white/80 mt-1">
+                      Governance and risk controls for adopting agentic AI workflows with confidence.
+                    </div>
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium group-hover:bg-white/15 transition-colors">
+                  Visit Site
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M7 17L17 7M17 7H9M17 7V15"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div className="text-sm font-semibold tracking-wider uppercase text-[#3fc1c9] mb-3">
+              Selected Clients
+            </div>
             <div className="rounded-2xl border border-gray-100 bg-white shadow-sm px-6 py-8">
               <div className="[mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] overflow-hidden">
                 <div className="logo-marquee">

@@ -413,6 +413,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Partner Spotlight */}
+      <section id="partners" className="py-24 px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+              <div className="max-w-2xl">
+                <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">Partner Spotlight</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] mb-4">Agentic Risks</h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Helping organizations adopt agentic AI workflows with clear governance and practical risk controls.
+                </p>
+              </div>
+
+              <a
+                href="https://agenticrisks.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="group w-full lg:w-[560px] rounded-3xl overflow-hidden bg-gradient-to-br from-[#364f6b] to-[#2c3e50] p-10 text-white shadow-lg"
+                aria-label="Visit Agentic Risks"
+              >
+                <div className="flex items-center justify-between gap-6">
+                  <Image
+                    src="/images/partners/agentic-risks.svg"
+                    alt="Agentic Risks logo"
+                    width={240}
+                    height={64}
+                    className="h-12 w-auto object-contain"
+                    unoptimized
+                  />
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium group-hover:bg-white/15 transition-colors">
+                    Visit Site
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M7 17L17 7M17 7H9M17 7V15"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <div className="mt-8">
+                  <div className="text-lg font-semibold">Agentic AI Controls Framework</div>
+                  <div className="mt-2 text-white/80">
+                    A pragmatic framework for safe, scalable automation with agentic systems.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Why Leap Section */}
       <section id="why-leap" className="py-32 px-8 bg-gradient-to-br from-[#364f6b] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto">
