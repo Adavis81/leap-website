@@ -413,6 +413,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Leap Section */}
+      <section id="why-leap" className="py-32 px-8 bg-gradient-to-br from-[#364f6b] to-[#2c3e50] text-white">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-20">
+              <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">The Leap Difference</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Leap?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We bring a unique combination of deep expertise and focused execution
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Financial Services Data Expertise",
+                description: "Operating models, governance, and data platforms across asset management, banking, insurance, and private markets.",
+              },
+              {
+                title: "Senior-by-Default Delivery",
+                description: "No leverage pyramid—your work is led and executed by experienced practitioners (15+ years).",
+              },
+              {
+                title: "Strategy-to-Production",
+                description: "We don't stop at decks: we design, build, and implement data platforms, controls, and AI solutions.",
+              },
+              {
+                title: "Risk-Ready AI",
+                description: "Practical AI governance, model risk alignment, and controls for generative and agentic AI.",
+              },
+            ].map((item, index) => (
+              <FadeIn key={item.title} delay={index * 100} className="h-full">
+                <div className="text-center p-8 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#3fc1c9] rounded-2xl flex items-center justify-center mx-auto mb-6 flex-shrink-0">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-center justify-center">{item.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{item.description}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partner Spotlight */}
       <section id="partners" className="py-24 px-8 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -465,54 +513,6 @@ export default function Home() {
               </a>
             </div>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* Why Leap Section */}
-      <section id="why-leap" className="py-32 px-8 bg-gradient-to-br from-[#364f6b] to-[#2c3e50] text-white">
-        <div className="max-w-7xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-20">
-              <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">The Leap Difference</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Leap?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We bring a unique combination of deep expertise and focused execution
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Financial Services Data Expertise",
-                description: "Operating models, governance, and data platforms across asset management, banking, insurance, and private markets.",
-              },
-              {
-                title: "Senior-by-Default Delivery",
-                description: "No leverage pyramid—your work is led and executed by experienced practitioners (15+ years).",
-              },
-              {
-                title: "Strategy-to-Production",
-                description: "We don't stop at decks: we design, build, and implement data platforms, controls, and AI solutions.",
-              },
-              {
-                title: "Risk-Ready AI",
-                description: "Practical AI governance, model risk alignment, and controls for generative and agentic AI.",
-              },
-            ].map((item, index) => (
-              <FadeIn key={item.title} delay={index * 100} className="h-full">
-                <div className="text-center p-8 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-[#3fc1c9] rounded-2xl flex items-center justify-center mx-auto mb-6 flex-shrink-0">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-center justify-center">{item.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{item.description}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
 
