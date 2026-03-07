@@ -297,19 +297,19 @@ const leapPrinciples = [
 
 const workModel = [
   {
-    title: "Strategy & Relationships",
+    title: "Strategy & Scoping",
     description:
       "We start by understanding your challenge, defining outcomes, and shaping the right approach together. This is where deep industry experience and judgment are irreplaceable.",
   },
   {
-    title: "Execution & Production",
+    title: "Accelerated Delivery",
     description:
-      "Our AI agents research, build, draft, and analyse at pace, handling the work that would traditionally require large junior teams.",
+      "Our senior consultants lead every workstream, supported by AI tools that accelerate research, drafting, and analysis \u2014 delivering in weeks what traditionally takes months.",
   },
   {
-    title: "Human Sign-Off",
+    title: "Quality & Accountability",
     description:
-      "Nothing leaves Leap without senior review and approval. Every deliverable carries our expertise and accountability, not just AI output.",
+      "Every deliverable is shaped, reviewed, and approved by experienced practitioners. You get senior accountability at every stage, not just a final check.",
   },
 ];
 
@@ -710,10 +710,10 @@ export default function Home() {
           <FadeIn delay={200}>
             <div className="border-t border-[#364f6b]/10 pt-10">
               <div className="mb-10">
-                <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-2">Our AI Team</p>
-                <h3 className="text-3xl font-bold text-[#364f6b] mb-4">Human-led delivery, AI-accelerated execution</h3>
+                <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-2">How We Use AI</p>
+                <h3 className="text-3xl font-bold text-[#364f6b] mb-4">AI-enhanced, human-led</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Leap&apos;s AI agents work alongside our human team to accelerate delivery. Every output is reviewed and approved by a senior practitioner.
+                  We use purpose-built AI tools to accelerate delivery &mdash; not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
                 </p>
               </div>
 
