@@ -216,6 +216,7 @@ const humanTeam = [
     role: "Co-founder",
     initials: "AD",
     imageSrc: "/images/adam-davis.png",
+    memojiSrc: "/images/Adam.jpeg",
     imageAlt: "Adam Davis",
     bio:
       "With over 20+ years across asset managers, hedge funds, private equity, fund administrators, insurers, and global banks, I\u2019ve led end-to-end engagements from strategy and operating model through implementation, rollout, and change management. My work typically centers on modern data platforms, investment data architecture, and AI strategy & governance\u2014balancing speed with the controls required in regulated environments.",
@@ -228,6 +229,7 @@ const humanTeam = [
     role: "Co-founder",
     initials: "HV",
     imageSrc: "/images/hortense-viard.png",
+    memojiSrc: "/images/hortense.jpeg",
     imageAlt: "Hortense Viard",
     linkedinUrl: "https://www.linkedin.com/in/hortenseviard/",
     bio:
@@ -709,35 +711,62 @@ export default function Home() {
 
           <FadeIn delay={200}>
             <div className="border-t border-[#364f6b]/10 pt-10">
-              <div className="mb-10">
+              {/* Header text */}
+              <div className="text-center mb-10">
                 <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-2">How We Use AI</p>
                 <h3 className="text-3xl font-bold text-[#364f6b] mb-4">AI-enhanced, human-led</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
                   We use purpose-built AI tools to accelerate delivery &mdash; not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {/* Human team - large memojis */}
+              <div className="flex justify-center gap-16 mb-8">
+                {humanTeam.map((member) => (
+                  <div key={member.name} className="flex flex-col items-center">
+                    <div className="w-24 h-24 rounded-full overflow-hidden border-3 border-[#364f6b]/20 shadow-lg mb-3">
+                      <Image
+                        src={member.memojiSrc || member.imageSrc}
+                        alt={member.name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="font-bold text-[#364f6b] text-base">{member.name}</div>
+                    <div className="text-gray-500 text-sm">{member.role}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* "supported by" divider */}
+              <div className="flex items-center gap-4 max-w-md mx-auto mb-8">
+                <div className="flex-1 h-px bg-[#364f6b]/15"></div>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#364f6b]/40">supported by</span>
+                <div className="flex-1 h-px bg-[#364f6b]/15"></div>
+              </div>
+
+              {/* AI agents - small row */}
+              <div className="flex flex-wrap justify-center gap-4">
                 {aiAgents.map((agent, index) => (
-                  <FadeIn key={agent.name} delay={index * 70} className="h-full">
-                    <div className="h-full rounded-3xl border border-[#364f6b]/10 bg-white p-7 shadow-sm hover:shadow-lg transition-all duration-300">
-                      <div className="flex items-start justify-between gap-4 mb-6">
-                        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#364f6b]/10 shadow-sm flex-shrink-0">
-                          <Image
-                            src={agent.imageSrc}
-                            alt={agent.name}
-                            width={80}
-                            height={80}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <span className="inline-flex items-center rounded-full border border-[#3fc1c9]/30 bg-[#3fc1c9]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2c8f95]">
-                          AI Agent
-                        </span>
+                  <FadeIn key={agent.name} delay={index * 70}>
+                    <div className="group relative flex flex-col items-center">
+                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#364f6b]/10 shadow-sm mb-2 group-hover:border-[#3fc1c9]/50 group-hover:shadow-md transition-all duration-300">
+                        <Image
+                          src={agent.imageSrc}
+                          alt={agent.name}
+                          width={48}
+                          height={48}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <div className="text-2xl font-bold text-[#364f6b] mb-1">{agent.name}</div>
-                      <div className="text-[#3fc1c9] font-medium mb-4">{agent.specialty}</div>
-                      <p className="text-gray-600 leading-relaxed">{agent.bio}</p>
+                      <div className="font-bold text-[#364f6b] text-xs">{agent.name}</div>
+                      <div className="text-[#3fc1c9] text-[10px] font-medium leading-tight text-center max-w-[100px]">{agent.specialty}</div>
+                      {/* Hover tooltip */}
+                      <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 rounded-2xl bg-[#364f6b] text-white p-4 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none">
+                        <div className="text-xs leading-relaxed">{agent.bio}</div>
+                        <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#364f6b] rotate-45"></div>
+                      </div>
                     </div>
                   </FadeIn>
                 ))}
