@@ -299,7 +299,7 @@ const workModel = [
   {
     title: "Strategy & Relationships",
     description:
-      "You and your client define the problem, the outcomes, and the approach. This is where industry experience and judgment are irreplaceable.",
+      "We start by understanding your challenge, defining outcomes, and shaping the right approach together. This is where deep industry experience and judgment are irreplaceable.",
   },
   {
     title: "Execution & Production",
