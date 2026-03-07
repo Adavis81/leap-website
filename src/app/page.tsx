@@ -220,7 +220,7 @@ const humanTeam = [
     bio:
       "With over 20+ years across asset managers, hedge funds, private equity, fund administrators, insurers, and global banks, I\u2019ve led end-to-end engagements from strategy and operating model through implementation, rollout, and change management. My work typically centers on modern data platforms, investment data architecture, and AI strategy & governance\u2014balancing speed with the controls required in regulated environments.",
     quote:
-      "We founded Leap to give financial services leaders a better consulting experience: senior, industry-tested expertise that delivers measurable outcomes.",
+      "We founded Leap to give financial services leaders a better consulting experience: senior, hands-on experts who work iteratively, stay focused on value, and deliver measurable outcomes.",
     linkedinUrl: "https://www.linkedin.com/in/adam-davis9/",
   },
   {
