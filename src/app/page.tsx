@@ -270,6 +270,15 @@ const aiAgents = [
   },
 ];
 
+const extendedTeam = [
+  { name: "Senior Practitioner", imageSrc: "/images/Senior Pracitioner.png" },
+  { name: "Senior Practitioner", imageSrc: "/images/Senior Practitioner 2.png" },
+  { name: "Sub Sector Specialist", imageSrc: "/images/Sub sector Specialist.png" },
+  { name: "QA & Control Lead", imageSrc: "/images/QA and Control Lead.png" },
+  { name: "AI & Tech Lead", imageSrc: "/images/AI and Tech Lead.png" },
+  { name: "Delivery Lead", imageSrc: "/images/Delivery Lead.png" },
+];
+
 const leapPrinciples = [
   {
     title: "Financial Services Data Expertise",
@@ -623,20 +632,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="mb-16">
-              <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">About Leap</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-8 leading-tight">
-                Boutique Expertise.
-                <span className="block">Enterprise Impact.</span>
-              </h2>
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                Leap Transformation Services is a boutique consulting firm dedicated exclusively to
-                helping financial services organizations unlock the full potential of their data and
-                AI investments.
-              </p>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                We combine deep industry expertise with hands-on technical experience to deliver
-                solutions that work in the real world, not just in presentations.
-              </p>
+              <div className="text-center mb-10">
+                <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">About Leap</p>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-6 leading-tight">
+                  Boutique Expertise. Enterprise Impact.
+                </h2>
+                <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                  Leap Transformation Services is a boutique consulting firm dedicated exclusively to
+                  helping financial services organizations unlock the full potential of their data and
+                  AI investments. We combine deep industry expertise with hands-on technical experience to deliver
+                  solutions that work in the real world, not just in presentations.
+                </p>
+              </div>
               <div className="grid sm:grid-cols-2 gap-8">
                 <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
                   <div className="text-5xl font-bold text-[#3fc1c9] mb-2">100%</div>
@@ -696,7 +703,7 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn delay={160}>
-            <div className="relative mb-14">
+            <div className="relative mb-6">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#3fc1c9]/20 to-[#364f6b]/20 rounded-3xl blur-2xl" />
               <div className="relative bg-gradient-to-br from-[#364f6b] to-[#2c3e50] rounded-3xl p-10 md:p-12 text-white">
                 <blockquote className="text-xl md:text-2xl font-light leading-relaxed italic text-center">
@@ -709,18 +716,26 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={200}>
-            <div className="border-t border-[#364f6b]/10 pt-10">
-              {/* Header text */}
-              <div className="text-center mb-10">
-                <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-2">How We Use AI</p>
-                <h3 className="text-3xl font-bold text-[#364f6b] mb-4">AI-enhanced, human-led</h3>
-                <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                  We use purpose-built AI tools to accelerate delivery &mdash; not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
-                </p>
-              </div>
+        </div>
+      </section>
 
-              {/* Human team - large memojis */}
+      {/* How We Work */}
+      <section id="how-we-work" className="pt-24 pb-28 px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">How We Work and Use AI</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-6">Senior-led. AI-enhanced. Human-verified.</h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                We use purpose-built AI tools to accelerate delivery &mdash; not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
+              </p>
+            </div>
+          </FadeIn>
+
+          {/* Our Team */}
+          <FadeIn delay={100}>
+            <div className="mb-16">
+              {/* Project Leads - co-founders on own row */}
               <div className="flex justify-center gap-16 mb-8">
                 {humanTeam.map((member) => (
                   <div key={member.name} className="flex flex-col items-center">
@@ -733,35 +748,52 @@ export default function Home() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="font-bold text-[#364f6b] text-base">{member.name}</div>
-                    <div className="text-gray-500 text-sm">{member.role}</div>
+                    <div className="font-semibold text-[#364f6b] text-sm">Project Lead</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Extended team row */}
+              <div className="flex flex-wrap justify-center gap-10 mb-10">
+                {extendedTeam.map((member, index) => (
+                  <div key={`${member.name}-${index}`} className="flex flex-col items-center">
+                    <div className="w-24 h-24 rounded-full overflow-hidden border-3 border-[#364f6b]/20 shadow-lg mb-3">
+                      <Image
+                        src={member.imageSrc}
+                        alt={member.name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="font-semibold text-[#364f6b] text-sm text-center max-w-[120px] leading-tight">{member.name}</div>
                   </div>
                 ))}
               </div>
 
               {/* "supported by" divider */}
-              <div className="flex items-center gap-4 max-w-md mx-auto mb-8">
+              <div className="flex items-center gap-4 max-w-md mx-auto mb-10">
                 <div className="flex-1 h-px bg-[#364f6b]/15"></div>
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#364f6b]/40">supported by</span>
                 <div className="flex-1 h-px bg-[#364f6b]/15"></div>
               </div>
 
-              {/* AI agents - small row */}
-              <div className="flex flex-wrap justify-center gap-4">
+              {/* AI agents - medium row */}
+              <div className="flex flex-wrap justify-center gap-6">
                 {aiAgents.map((agent, index) => (
                   <FadeIn key={agent.name} delay={index * 70}>
                     <div className="group relative flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#364f6b]/10 shadow-sm mb-2 group-hover:border-[#3fc1c9]/50 group-hover:shadow-md transition-all duration-300">
+                      <div className="w-18 h-18 rounded-full overflow-hidden border-2 border-[#364f6b]/10 shadow-sm mb-2 group-hover:border-[#3fc1c9]/50 group-hover:shadow-md transition-all duration-300" style={{ width: '4.5rem', height: '4.5rem' }}>
                         <Image
                           src={agent.imageSrc}
                           alt={agent.name}
-                          width={48}
-                          height={48}
+                          width={72}
+                          height={72}
                           className="w-full h-full object-cover"
                         />
                       </div>
                       <div className="font-bold text-[#364f6b] text-xs">{agent.name}</div>
-                      <div className="text-[#3fc1c9] text-[10px] font-medium leading-tight text-center max-w-[100px]">{agent.specialty}</div>
+                      <div className="text-[#3fc1c9] text-[10px] font-medium leading-tight text-center max-w-[110px]">{agent.specialty}</div>
                       {/* Hover tooltip */}
                       <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 rounded-2xl bg-[#364f6b] text-white p-4 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none">
                         <div className="text-xs leading-relaxed">{agent.bio}</div>
@@ -773,22 +805,13 @@ export default function Home() {
               </div>
             </div>
           </FadeIn>
-        </div>
-      </section>
 
-      {/* How We Work */}
-      <section id="how-we-work" className="pt-8 pb-28 px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">How We Work</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-6">Senior-led. AI-accelerated. Human-verified.</h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                A model built for financial services. Senior-led, AI-accelerated, and human-verified at every stage.
-              </p>
-            </div>
+          {/* Work model cards */}
+          <FadeIn delay={150}>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto text-center mb-10">
+              Our process, a model built for financial services.
+            </p>
           </FadeIn>
-
           <div className="grid lg:grid-cols-3 gap-8 mb-10">
             {workModel.map((item, index) => (
               <FadeIn key={item.title} delay={index * 100} className="h-full">
