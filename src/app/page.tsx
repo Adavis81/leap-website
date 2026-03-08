@@ -716,6 +716,8 @@ export default function Home() {
             </div>
           </FadeIn>
 
+          <div className="border-t border-[#364f6b]/10 mt-8"></div>
+
         </div>
       </section>
 
