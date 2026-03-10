@@ -219,7 +219,7 @@ const humanTeam = [
     memojiSrc: "/images/Adam.jpeg",
     imageAlt: "Adam Davis",
     bio:
-      "With over 20+ years across asset managers, hedge funds, private equity, fund administrators, insurers, and global banks, I\u2019ve led end-to-end engagements from strategy and operating model through implementation, rollout, and change management. My work typically centers on modern data platforms, investment data architecture, and AI strategy & governance\u2014balancing speed with the controls required in regulated environments.",
+      "With over 20 years of experience working with asset managers, hedge funds, private equity firms, fund administrators, insurers, and global banks, I lead end-to-end transformations spanning strategy, operating model design, and implementation. My work focuses on modern data platforms, investment data architecture, and AI strategy, implementation, and governance\u2014helping firms unlock value from data while maintaining the controls required in highly regulated environments.",
     quote:
       "We founded Leap to give financial services leaders a better consulting experience: senior, hands-on experts who work iteratively, stay focused on value, and deliver measurable outcomes.",
     linkedinUrl: "https://www.linkedin.com/in/adam-davis9/",
@@ -233,7 +233,7 @@ const humanTeam = [
     imageAlt: "Hortense Viard",
     linkedinUrl: "https://www.linkedin.com/in/hortenseviard/",
     bio:
-      "With over 20 years of experience in the Financial Services industry, I have had the privilege of working with global and foreign banking, insurance organizations, PE firms across Europe and the US. My expertise lies in supporting business, finance and risk management functions, driving regulatory compliance, and leading large-scale transformation programs. I specialize in bridging the gap between business and technology/data, ensuring that organizations and their risk function stay ahead of evolving challenges. My focus areas include financial and enterprise risk management, with a recent emphasis on emerging risks such as climate/ESG risk and the impact of innovative technologies like Generative AI (GenAI). I am passionate about helping institutions navigate the complexities of risk in today's rapidly changing environment and increased regulatory scrutiny, ensuring they are equipped to face both current and future challenges.",
+      "With over 20 years of experience in Financial Services, I work with global banks, insurers, and private equity firms across Europe and the US. I specialize in financial and enterprise risk management, regulatory transformation, and bridging the gap between business and technology. Recent areas of focus include helping organizations manage emerging risks such as ESG and climate change, as well as understanding the impact of AI and Generative AI on risk management frameworks.",
   },
 ];
 
