@@ -54,14 +54,14 @@ const partnersAndClients: LogoItem[] = [
     logoSrc: "/images/partners/western-asset-management.png",
   },
   { name: "HSBC", href: "https://www.hsbc.com/", logoSrc: "/images/partners/hsbc.svg" },
-  { name: "Wells Fargo", href: "https://www.wellsfargo.com/", logoSrc: "/images/partners/wells-fargo.svg" },
+  { name: "Wells Fargo", href: "https://www.wellsfargo.com/", logoSrc: "/images/partners/wells-fargo.png" },
   { name: "American Express", href: "https://www.americanexpress.com/", logoSrc: "/images/partners/american-express.svg" },
-  { name: "BNP Paribas", href: "https://www.bnpparibas.com/", logoSrc: "/images/partners/bnpp.svg" },
-  { name: "Rabobank", href: "https://www.rabobank.com/", logoSrc: "/images/partners/rabo-bank.svg" },
+  { name: "BNP Paribas", href: "https://www.bnpparibas.com/", logoSrc: "/images/partners/bnpp.jpeg" },
+  { name: "Rabobank", href: "https://www.rabobank.com/", logoSrc: "/images/partners/rabo-bank.png" },
   { name: "FCB", href: "https://www.fcb.com/", logoSrc: "/images/partners/fcb.svg" },
   { name: "AIG", href: "https://www.aig.com/", logoSrc: "/images/partners/aig.svg" },
   { name: "Intact Insurance", href: "https://www.intact.ca/", logoSrc: "/images/partners/intact-insurance.svg" },
-  { name: "KBRA", href: "https://www.kbra.com/", logoSrc: "/images/partners/kbra.svg" },
+  { name: "KBRA", href: "https://www.kbra.com/", logoSrc: "/images/partners/kbra.jpeg" },
 ];
 
 export default function PartnersClientsPage() {
