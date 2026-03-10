@@ -271,12 +271,12 @@ const aiAgents = [
 ];
 
 const extendedTeam = [
-  { name: "Senior Practitioner", imageSrc: "/images/Senior Pracitioner.png" },
-  { name: "Senior Practitioner", imageSrc: "/images/Senior Practitioner 2.png" },
-  { name: "Sub Sector Specialist", imageSrc: "/images/Sub sector Specialist.png" },
-  { name: "QA & Control Lead", imageSrc: "/images/QA and Control Lead.png" },
-  { name: "AI & Tech Lead", imageSrc: "/images/AI and Tech Lead.png" },
-  { name: "Delivery Lead", imageSrc: "/images/Delivery Lead.png" },
+  { name: "Change Management Expert", imageSrc: "/images/Senior Pracitioner.png" },
+  { name: "Data & AI Solution Architect", imageSrc: "/images/Senior Practitioner 2.png" },
+  { name: "AI Engineer", imageSrc: "/images/Sub sector Specialist.png" },
+  { name: "Agentic Process Manager", imageSrc: "/images/QA and Control Lead.png" },
+  { name: "QA & Control Lead", imageSrc: "/images/AI and Tech Lead.png" },
+  { name: "Data Scientist", imageSrc: "/images/Delivery Lead.png" },
 ];
 
 const leapPrinciples = [
@@ -578,7 +578,14 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 ),
                 title: "AI Strategy",
-                description: "Identify and prioritize AI use cases, then build a pragmatic roadmap grounded in feasibility, controls, and measurable value.",
+                description: "Identify and prioritize AI use cases, then build a pragmatic roadmap grounded in feasibility, controls, and measurable value, including recommendations on the right technical solutions (i.e. - Claude, ChatGPT, Gemini, Copilot, etc.)",
+              },
+              {
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                ),
+                title: "AI Implementation",
+                description: "Turn AI strategy into production-ready solutions—from proof of concept through deployment, integration, and ongoing optimization within your existing infrastructure.",
               },
               {
                 icon: (
@@ -600,13 +607,6 @@ export default function Home() {
                 ),
                 title: "Operating Model & Change",
                 description: "Define the roles, processes, and ways of working to run data and AI sustainably—then drive adoption through structured change.",
-              },
-              {
-                icon: (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                ),
-                title: "Team Augmentation",
-                description: "Embed senior data and AI practitioners into your team to accelerate delivery, uplift capability, and transfer knowledge.",
               },
             ].map((service, index) => (
               <FadeIn key={service.title} delay={index * 100}>
@@ -739,7 +739,7 @@ export default function Home() {
             <div className="mb-16">
               {/* Project Leads - co-founders on own row */}
               <div className="flex justify-center gap-16 mb-8">
-                {humanTeam.map((member) => (
+                {humanTeam.map((member, index) => (
                   <div key={member.name} className="flex flex-col items-center">
                     <div className="w-24 h-24 rounded-full overflow-hidden border-3 border-[#364f6b]/20 shadow-lg mb-3">
                       <Image
@@ -750,7 +750,7 @@ export default function Home() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="font-semibold text-[#364f6b] text-sm">Project Lead</div>
+                    <div className="font-semibold text-[#364f6b] text-sm text-center max-w-[160px] leading-tight">{index === 0 ? "Data & AI Expert" : "Business, Risk & Compliance Expert"}</div>
                   </div>
                 ))}
               </div>
@@ -776,7 +776,7 @@ export default function Home() {
               {/* "supported by" divider */}
               <div className="flex items-center gap-4 max-w-md mx-auto mb-10">
                 <div className="flex-1 h-px bg-[#364f6b]/15"></div>
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#364f6b]/40">supported by</span>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#364f6b]/40">supported by AI Agents</span>
                 <div className="flex-1 h-px bg-[#364f6b]/15"></div>
               </div>
 
