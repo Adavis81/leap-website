@@ -114,12 +114,28 @@ export default function Home() {
               About
             </a>
             <a
+              href="#how-we-work"
+              className={`font-medium transition-colors ${
+                scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
+              }`}
+            >
+              How We Work
+            </a>
+            <a
               href="#why-leap"
               className={`font-medium transition-colors ${
                 scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
               }`}
             >
               Why Leap
+            </a>
+            <a
+              href="#partners"
+              className={`font-medium transition-colors ${
+                scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
+              }`}
+            >
+              Partners & Clients
             </a>
             <a
               href="#contact"
@@ -156,8 +172,14 @@ export default function Home() {
               <a href="#about" className="text-[#364f6b] font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 About
               </a>
+              <a href="#how-we-work" className="text-[#364f6b] font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+                How We Work
+              </a>
               <a href="#why-leap" className="text-[#364f6b] font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 Why Leap
+              </a>
+              <a href="#partners" className="text-[#364f6b] font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+                Partners & Clients
               </a>
               <a
                 href="#contact"
@@ -196,7 +218,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={200}>
                 <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl">
-                  Senior practitioners who design and deliver strategy-to-production data platforms, AI use cases, and governance—across asset management, banking, insurance, and private markets.
+                  Senior practitioners who design and deliver strategy-to-production data platforms, AI use cases, and governance, across asset management, banking, insurance, and private markets.
                 </p>
               </FadeIn>
               <FadeIn delay={300}>
@@ -258,42 +280,42 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 ),
                 title: "Data Strategy",
-                description: "Align your data vision, operating model, and governance to a clear roadmap—focused on measurable business outcomes and regulatory needs.",
+                description: "Align your data vision, operating model, and governance to a clear roadmap, focused on measurable business outcomes and regulatory needs.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 ),
                 title: "AI Strategy",
-                description: "Identify and prioritize AI use cases, then build a pragmatic roadmap grounded in feasibility, controls, and measurable value.",
+                description: "Identify and prioritize AI use cases, then build a pragmatic roadmap grounded in feasibility, controls, and measurable value, including recommendations on the right technical solutions (i.e. - Claude, ChatGPT, Gemini, Copilot, etc.)",
+              },
+              {
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                ),
+                title: "AI Implementation",
+                description: "Turn AI strategy into production-ready solutions, from proof of concept through deployment, integration, and ongoing optimization within your existing infrastructure.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                 ),
                 title: "Data Engineering",
-                description: "Design and build modern data platforms and pipelines—integrating best-fit tools to scale securely and reliably with your business.",
+                description: "Design and build modern data platforms and pipelines, integrating best-fit tools to scale securely and reliably with your business.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 ),
                 title: "Risk & Compliance",
-                description: "Strengthen data and AI risk management with governance, controls, and regulatory-ready documentation—covering GenAI and emerging AI risks.",
+                description: "Strengthen data and AI risk management with governance, controls, and regulatory-ready documentation, covering GenAI and emerging AI risks.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 ),
                 title: "Operating Model & Change",
-                description: "Define the roles, processes, and ways of working to run data and AI sustainably—then drive adoption through structured change.",
-              },
-              {
-                icon: (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                ),
-                title: "Team Augmentation",
-                description: "Embed senior data and AI practitioners into your team to accelerate delivery, uplift capability, and transfer knowledge.",
+                description: "Define the roles, processes, and ways of working to run data and AI sustainably, then drive adoption through structured change.",
               },
             ].map((service, index) => (
               <FadeIn key={service.title} delay={index * 100}>
@@ -317,7 +339,7 @@ export default function Home() {
       {/* About Section - Full Width */}
       <section id="about" className="py-32 px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             <FadeIn>
               <div>
                 <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">About Leap</p>
@@ -328,13 +350,10 @@ export default function Home() {
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   Leap Transformation Services is a boutique consulting firm dedicated exclusively to
                   helping financial services organizations unlock the full potential of their data and
-                  AI investments.
+                  AI investments. We combine deep industry expertise with hands-on technical experience to deliver
+                  solutions that work in the real world, not just in presentations.
                 </p>
-                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                  We combine deep industry expertise with hands-on technical experience to deliver
-                  solutions that work in the real world—not just in presentations.
-                </p>
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-8 mb-10">
                   <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
                     <div className="text-5xl font-bold text-[#3fc1c9] mb-2">100%</div>
                     <div className="text-gray-600 font-medium">Financial Services Focus</div>
@@ -346,34 +365,197 @@ export default function Home() {
                 </div>
               </div>
             </FadeIn>
-            <FadeIn delay={200}>
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#3fc1c9]/20 to-[#364f6b]/20 rounded-3xl blur-2xl" />
-                <div className="relative bg-gradient-to-br from-[#364f6b] to-[#2c3e50] rounded-3xl p-12 text-white">
-                  <Image
-                    src="/images/adam-davis.png"
-                    alt="Adam Davis"
-                    width={120}
-                    height={120}
-                    className="mb-8 rounded-full object-cover w-[120px] h-[120px]"
-                  />
-                  <blockquote className="text-2xl font-light leading-relaxed mb-8 italic">
-                    &ldquo;We founded Leap to give financial services leaders a better consulting experience:
-                    senior, industry-tested expertise that delivers measurable outcomes.&rdquo;
-                  </blockquote>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[#3fc1c9]/20 rounded-full flex items-center justify-center">
-                      <span className="text-[#3fc1c9] font-bold text-lg">AD</span>
-                    </div>
+            <div className="space-y-8">
+              <FadeIn delay={100}>
+                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                  <div className="flex items-center gap-4 mb-4">
+                    <Image
+                      src="/images/adam-davis.png"
+                      alt="Adam Davis"
+                      width={80}
+                      height={80}
+                      className="rounded-full object-cover w-[80px] h-[80px]"
+                    />
                     <div>
-                      <div className="font-semibold">Adam Davis</div>
-                      <div className="text-gray-300 text-sm">Founder</div>
+                      <div className="font-bold text-[#364f6b] text-lg">Adam Davis</div>
+                      <div className="text-[#3fc1c9] font-medium">Co-founder</div>
                     </div>
                   </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    With over 20 years of experience working with asset managers, hedge funds, private equity firms, fund administrators, insurers, and global banks, I lead end-to-end transformations spanning strategy, operating model design, and implementation. My work focuses on modern data platforms, investment data architecture, and AI strategy, implementation, and governance, helping firms unlock value from data while maintaining the controls required in highly regulated environments.
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn delay={200}>
+                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-[80px] h-[80px] rounded-full bg-gradient-to-br from-[#364f6b] to-[#3fc1c9] flex items-center justify-center">
+                      <span className="text-white font-bold text-2xl">HV</span>
+                    </div>
+                    <div>
+                      <div className="font-bold text-[#364f6b] text-lg">Hortense Viard</div>
+                      <div className="text-[#3fc1c9] font-medium">Co-founder</div>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    With over 20 years of experience in Financial Services, I work with global banks, insurers, and private equity firms across Europe and the US. I specialize in financial and enterprise risk management, regulatory transformation, and bridging the gap between business and technology. Recent areas of focus include helping organizations manage emerging risks such as ESG and climate change, as well as understanding the impact of AI and Generative AI on risk management frameworks.
+                  </p>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+          <FadeIn delay={300}>
+            <div className="mt-16 relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-[#3fc1c9]/20 to-[#364f6b]/20 rounded-3xl blur-2xl" />
+              <div className="relative bg-gradient-to-br from-[#364f6b] to-[#2c3e50] rounded-3xl p-12 text-white">
+                <blockquote className="text-2xl font-light leading-relaxed mb-8 italic">
+                  &ldquo;We founded Leap to give financial services leaders a better consulting experience:
+                  senior, hands-on experts who work iteratively, stay focused on value, and deliver measurable outcomes.&rdquo;
+                </blockquote>
+                <div className="text-gray-300">
+                  Adam Davis & Hortense Viard, Co-founders
                 </div>
               </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* How We Work Section */}
+      <section id="how-we-work" className="py-32 px-8 scroll-mt-24">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-20">
+              <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">Our Approach</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-6">
+                Senior-led. AI-enhanced. Human-verified.
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We use purpose-built AI tools to accelerate delivery, not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
+              </p>
+            </div>
+          </FadeIn>
+
+          {/* Team Members */}
+          <FadeIn>
+            <div className="mb-20">
+              <h3 className="text-2xl font-bold text-[#364f6b] text-center mb-10">Our Team</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  "Data & AI Expert",
+                  "Business, Risk & Compliance Expert",
+                  "Change Management Expert",
+                  "Data & AI Solution Architect",
+                  "AI Engineer",
+                  "Agentic Process Manager",
+                  "QA & Control Lead",
+                  "Data Scientist",
+                ].map((role, index) => (
+                  <div key={role} className="bg-white p-6 rounded-2xl border border-gray-100 text-center shadow-sm">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#364f6b] to-[#3fc1c9] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-[#364f6b] font-medium text-sm">{role}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* AI Agents */}
+          <FadeIn>
+            <div className="mb-20">
+              <h3 className="text-2xl font-bold text-[#364f6b] text-center mb-4">Supported by AI Agents</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                {[
+                  {
+                    name: "ARIA",
+                    role: "Research & Intelligence",
+                    description: "Monitors regulatory developments, market trends, and sector news across financial services. Keeps Leap's work current and commercially aware.",
+                  },
+                  {
+                    name: "OTTO",
+                    role: "Data Engineering",
+                    description: "Builds and structures data pipelines and automates repetitive data tasks. Delivers in hours what would take a junior analyst days.",
+                  },
+                  {
+                    name: "CLEO",
+                    role: "Document & Deliverable Production",
+                    description: "Drafts reports, proposals, and presentations to Leap's standards. Every output reviewed and refined by a human principal before delivery.",
+                  },
+                  {
+                    name: "SAGE",
+                    role: "Risk & Compliance Monitoring",
+                    description: "Reviews outputs for regulatory alignment and flags anything requiring human judgement. Particularly focused on GenAI and data governance.",
+                  },
+                  {
+                    name: "REX",
+                    role: "Project Operations",
+                    description: "Manages timelines, tracks project status, and keeps delivery on track. The operational backbone of every engagement.",
+                  },
+                ].map((agent, index) => (
+                  <FadeIn key={agent.name} delay={index * 100}>
+                    <div className="bg-gradient-to-br from-[#364f6b] to-[#2c3e50] p-8 rounded-2xl text-white h-full">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-[#3fc1c9] rounded-xl flex items-center justify-center">
+                          <span className="font-bold text-sm">{agent.name}</span>
+                        </div>
+                        <div>
+                          <div className="font-bold">{agent.name}</div>
+                          <div className="text-[#3fc1c9] text-sm">{agent.role}</div>
+                        </div>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">{agent.description}</p>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Process Steps */}
+          <FadeIn>
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold text-[#364f6b] text-center mb-4">
+                Our process, a model built for financial services.
+              </h3>
+              <div className="grid md:grid-cols-3 gap-8 mt-10">
+                {[
+                  {
+                    step: "01",
+                    title: "Strategy & Scoping",
+                    description: "We start by understanding your challenge, defining outcomes, and shaping the right approach together. This is where deep industry experience and judgment are irreplaceable.",
+                  },
+                  {
+                    step: "02",
+                    title: "Accelerated Delivery",
+                    description: "Our senior consultants lead every workstream, supported by AI tools that accelerate research, drafting, and analysis, delivering in weeks what traditionally takes months.",
+                  },
+                  {
+                    step: "03",
+                    title: "Quality & Accountability",
+                    description: "Every deliverable is shaped, reviewed, and approved by experienced practitioners. You get senior accountability at every stage, not just a final check.",
+                  },
+                ].map((item) => (
+                  <div key={item.step} className="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm">
+                    <div className="text-5xl font-bold text-[#3fc1c9] mb-4">{item.step}</div>
+                    <h4 className="text-xl font-bold text-[#364f6b] mb-4">{item.title}</h4>
+                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <div className="bg-gray-50 rounded-2xl p-8 text-center">
+              <p className="text-gray-600 italic">
+                On data privacy: Leap uses enterprise-grade AI tools where client data is never used for model training. We&apos;re happy to share our AI data handling policy on request.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -390,7 +572,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Financial Services Data Expertise",
@@ -398,15 +580,23 @@ export default function Home() {
               },
               {
                 title: "Senior-by-Default Delivery",
-                description: "No leverage pyramid—your work is led and executed by experienced practitioners (15+ years).",
+                description: "No leverage pyramid. Your work is led and executed by experienced practitioners with 15+ years of experience.",
               },
               {
                 title: "Strategy-to-Production",
-                description: "We don't stop at decks: we design, build, and implement data platforms, controls, and AI solutions.",
+                description: "We do not stop at decks. We design, build, and implement data platforms, controls, and AI solutions.",
               },
               {
                 title: "Risk-Ready AI",
                 description: "Practical AI governance, model risk alignment, and controls for generative and agentic AI.",
+              },
+              {
+                title: "Focused Accountability",
+                description: "Clear ownership, direct client access, and delivery managed by the people responsible for the outcome.",
+              },
+              {
+                title: "Agent-Augmented Delivery",
+                description: "Our AI agents handle research, drafting, and data work at speed so our human principals focus entirely on strategy, judgement, and client outcomes. Senior expertise at every stage, without the traditional cost base.",
               },
             ].map((item, index) => (
               <FadeIn key={item.title} delay={index * 100} className="h-full">
@@ -422,6 +612,43 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section id="partners" className="py-32 px-8 bg-gray-50 scroll-mt-24">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">Partner Spotlight</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-6">Partners & Clients</h2>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={100}>
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-white p-10 rounded-2xl border border-gray-100 shadow-sm text-center">
+                <h3 className="text-2xl font-bold text-[#364f6b] mb-4">Agentic Risks</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Helping organizations adopt agentic AI workflows with clear governance and practical risk controls.
+                </p>
+                <p className="text-[#364f6b] font-medium mb-6">
+                  Agentic AI Controls Framework
+                </p>
+                <p className="text-gray-600 mb-8">
+                  A pragmatic framework for safe, scalable automation with agentic systems.
+                </p>
+                <a
+                  href="https://www.agenticrisks.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#3fc1c9] text-white px-8 py-3 rounded-full font-medium hover:bg-[#2ba5ad] transition-all hover:shadow-lg"
+                >
+                  Visit Site
+                </a>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -522,10 +749,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <Image src="/images/logo-white.svg" alt="Leap Transformation Services" width={140} height={50} />
-            <div className="flex items-center gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-8">
               <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
               <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
-              <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+              <a href="#how-we-work" className="text-gray-300 hover:text-white transition-colors">How We Work</a>
+              <a href="#why-leap" className="text-gray-300 hover:text-white transition-colors">Why Leap</a>
+              <a href="#partners" className="text-gray-300 hover:text-white transition-colors">Partners & Clients</a>
+              <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Get in Touch</a>
             </div>
             <p className="text-gray-400 text-sm">
               &copy; {new Date().getFullYear()} Leap Transformation Services. All rights reserved.

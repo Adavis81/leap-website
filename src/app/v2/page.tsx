@@ -333,7 +333,7 @@ export default function Home() {
                 </p>
                 <p className="text-xl text-gray-600 mb-10 leading-relaxed">
                   We combine deep industry expertise with hands-on technical experience to deliver
-                  solutions that work in the real world—not just in presentations.
+                  solutions that work in the real world, not just in presentations.
                 </p>
                 <div className="grid grid-cols-2 gap-8">
                   <div className="text-center p-6 bg-white rounded-2xl shadow-sm">

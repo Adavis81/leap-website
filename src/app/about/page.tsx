@@ -135,7 +135,7 @@ export default function About() {
                 </p>
                 <p>
                   Throughout his career, Adam has built a track record of turning complex data
-                  challenges into actionable insights—helping clients achieve strategic goals with
+                  challenges into actionable insights, helping clients achieve strategic goals with
                   precision and efficiency.
                 </p>
               </div>
@@ -148,8 +148,8 @@ export default function About() {
             <blockquote className="text-xl leading-relaxed text-gray-200 italic">
               &ldquo;I founded Leap to give financial services leaders a better consulting experience:
               a senior, industry-tested team with deep financial services expertise that can step in
-              quickly and deliver measurable outcomes. Our engagements are right-sized by design—built
-              around experienced practitioners, not layers of junior staffing—so you get focused
+              quickly and deliver measurable outcomes. Our engagements are right-sized by design, built
+              around experienced practitioners, not layers of junior staffing, so you get focused
               execution and results that hold up in the real world.&rdquo;
             </blockquote>
           </div>
