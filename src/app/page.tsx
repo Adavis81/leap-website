@@ -315,7 +315,7 @@ const workModel = [
   {
     title: "Accelerated Delivery",
     description:
-      "Our senior consultants lead every workstream, supported by AI tools that accelerate research, drafting, and analysis \u2014 delivering in weeks what traditionally takes months.",
+      "Our senior consultants lead every workstream, supported by AI tools that accelerate research, drafting, and analysis, delivering in weeks what traditionally takes months.",
   },
   {
     title: "Quality & Accountability",
@@ -729,7 +729,7 @@ export default function Home() {
               <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">How We Work and Use AI</p>
               <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-6">Senior-led. AI-enhanced. Human-verified.</h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                We use purpose-built AI tools to accelerate delivery &mdash; not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
+                We use purpose-built AI tools to accelerate delivery, not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
               </p>
             </div>
           </FadeIn>
