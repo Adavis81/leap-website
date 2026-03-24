@@ -29,7 +29,7 @@ export default function TwitterImage() {
             that actually ships
           </div>
           <div style={{ fontSize: 28, lineHeight: 1.25, opacity: 0.92 }}>
-            Financial services consulting—from strategy to production.
+            Financial services consulting, from strategy to production.
           </div>
         </div>
         <div

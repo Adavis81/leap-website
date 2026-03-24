@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Leap Transformation Services | Data & AI Consulting for Financial Services",
   description:
-    "Data & AI consulting for financial services—from strategy to production. Boutique expertise delivering enterprise impact.",
+    "Data & AI consulting for financial services, from strategy to production. Boutique expertise delivering enterprise impact.",
   icons: {
     icon: "/icon.png",
   },
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     siteName: "Leap Transformation Services",
     title: "Leap Transformation Services | Data & AI Consulting for Financial Services",
     description:
-      "Data & AI consulting for financial services—from strategy to production. Boutique expertise delivering enterprise impact.",
+      "Data & AI consulting for financial services, from strategy to production. Boutique expertise delivering enterprise impact.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Leap Transformation Services | Data & AI Consulting for Financial Services",
     description:
-      "Data & AI consulting for financial services—from strategy to production. Boutique expertise delivering enterprise impact.",
+      "Data & AI consulting for financial services, from strategy to production. Boutique expertise delivering enterprise impact.",
   },
 };
 

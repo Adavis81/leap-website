@@ -219,7 +219,7 @@ const humanTeam = [
     memojiSrc: "/images/Adam.jpeg",
     imageAlt: "Adam Davis",
     bio:
-      "With over 20 years of experience working with asset managers, hedge funds, private equity firms, fund administrators, insurers, and global banks, I lead end-to-end transformations spanning strategy, operating model design, and implementation. My work focuses on modern data platforms, investment data architecture, and AI strategy, implementation, and governance\u2014helping firms unlock value from data while maintaining the controls required in highly regulated environments.",
+      "With over 20 years of experience working with asset managers, hedge funds, private equity firms, fund administrators, insurers, and global banks, I lead end-to-end transformations spanning strategy, operating model design, and implementation. My work focuses on modern data platforms, investment data architecture, and AI strategy, implementation, and governance, helping firms unlock value from data while maintaining the controls required in highly regulated environments.",
     quote:
       "We founded Leap to give financial services leaders a better consulting experience: senior, hands-on experts who work iteratively, stay focused on value, and deliver measurable outcomes.",
     linkedinUrl: "https://www.linkedin.com/in/adam-davis9/",
@@ -509,7 +509,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={200}>
                 <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl">
-                  Senior practitioners who design and deliver strategy-to-production data platforms, AI use cases, and governance—across asset management, banking, insurance, and private markets.
+                  Senior practitioners who design and deliver strategy-to-production data platforms, AI use cases, and governance, across asset management, banking, insurance, and private markets.
                 </p>
               </FadeIn>
               <FadeIn delay={300}>
@@ -571,7 +571,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 ),
                 title: "Data Strategy",
-                description: "Align your data vision, operating model, and governance to a clear roadmap—focused on measurable business outcomes and regulatory needs.",
+                description: "Align your data vision, operating model, and governance to a clear roadmap, focused on measurable business outcomes and regulatory needs.",
               },
               {
                 icon: (
@@ -585,28 +585,28 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 ),
                 title: "AI Implementation",
-                description: "Turn AI strategy into production-ready solutions—from proof of concept through deployment, integration, and ongoing optimization within your existing infrastructure.",
+                description: "Turn AI strategy into production-ready solutions, from proof of concept through deployment, integration, and ongoing optimization within your existing infrastructure.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                 ),
                 title: "Data Engineering",
-                description: "Design and build modern data platforms and pipelines—integrating best-fit tools to scale securely and reliably with your business.",
+                description: "Design and build modern data platforms and pipelines, integrating best-fit tools to scale securely and reliably with your business.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 ),
                 title: "Risk & Compliance",
-                description: "Strengthen data and AI risk management with governance, controls, and regulatory-ready documentation—covering GenAI and emerging AI risks.",
+                description: "Strengthen data and AI risk management with governance, controls, and regulatory-ready documentation, covering GenAI and emerging AI risks.",
               },
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 ),
                 title: "Operating Model & Change",
-                description: "Define the roles, processes, and ways of working to run data and AI sustainably—then drive adoption through structured change.",
+                description: "Define the roles, processes, and ways of working to run data and AI sustainably, then drive adoption through structured change.",
               },
             ].map((service, index) => (
               <FadeIn key={service.title} delay={index * 100}>
