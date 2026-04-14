@@ -26,6 +26,9 @@ export default function About() {
             <Link href="/#services" className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors">
               Services
             </Link>
+            <Link href="/offerings" className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors">
+              Offerings
+            </Link>
             <Link href="/about" className="text-[#3fc1c9] font-medium">
               About
             </Link>
@@ -69,6 +72,13 @@ export default function About() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
+              </Link>
+              <Link
+                href="/offerings"
+                className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Offerings
               </Link>
               <Link
                 href="/about"

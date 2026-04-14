@@ -105,6 +105,14 @@ export default function PartnersClientsPage() {
               Services
             </Link>
             <Link
+              href="/offerings"
+              className={`font-medium transition-colors ${
+                scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
+              }`}
+            >
+              Offerings
+            </Link>
+            <Link
               href="/#about"
               className={`font-medium transition-colors ${
                 scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
@@ -170,6 +178,13 @@ export default function PartnersClientsPage() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
+              </Link>
+              <Link
+                href="/offerings"
+                className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Offerings
               </Link>
               <Link
                 href="/#about"

@@ -270,13 +270,43 @@ const aiAgents = [
   },
 ];
 
-const extendedTeam = [
-  { name: "Change Management Expert", imageSrc: "/images/Senior Pracitioner.png" },
-  { name: "Data & AI Solution Architect", imageSrc: "/images/Senior Practitioner 2.png" },
-  { name: "AI Engineer", imageSrc: "/images/Sub sector Specialist.png" },
-  { name: "Agentic Process Manager", imageSrc: "/images/QA and Control Lead.png" },
-  { name: "QA & Control Lead", imageSrc: "/images/AI and Tech Lead.png" },
-  { name: "Data Scientist", imageSrc: "/images/Delivery Lead.png" },
+const deliveryCapabilities = [
+  {
+    title: "Change Management",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+    ),
+  },
+  {
+    title: "Data & AI Solution Architecture",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+    ),
+  },
+  {
+    title: "AI Engineering",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+    ),
+  },
+  {
+    title: "Agentic Process Management",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+    ),
+  },
+  {
+    title: "QA & Controls",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+    ),
+  },
+  {
+    title: "Data Science",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+    ),
+  },
 ];
 
 const leapPrinciples = [
@@ -388,6 +418,14 @@ export default function Home() {
             >
               Services
             </a>
+            <Link
+              href="/offerings"
+              className={`font-medium transition-colors ${
+                scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
+              }`}
+            >
+              Offerings
+            </Link>
             <a
               href="#about"
               className={`font-medium transition-colors ${
@@ -452,6 +490,13 @@ export default function Home() {
               <a href="#services" className="text-[#364f6b] font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 Services
               </a>
+              <Link
+                href="/offerings"
+                className="text-[#364f6b] font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Offerings
+              </Link>
               <a href="#about" className="text-[#364f6b] font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 About
               </a>
@@ -565,7 +610,7 @@ export default function Home() {
           </FadeIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
+            {([
               {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -579,6 +624,7 @@ export default function Home() {
                 ),
                 title: "AI Strategy",
                 description: "Identify and prioritize AI use cases, then build a pragmatic roadmap grounded in feasibility, controls, and measurable value, including recommendations on the right technical solutions (i.e. - Claude, ChatGPT, Gemini, Copilot, etc.)",
+                href: "/offerings#ai-strategy",
               },
               {
                 icon: (
@@ -586,6 +632,7 @@ export default function Home() {
                 ),
                 title: "AI Implementation",
                 description: "Turn AI strategy into production-ready solutions, from proof of concept through deployment, integration, and ongoing optimization within your existing infrastructure.",
+                href: "/offerings#ai-implementation",
               },
               {
                 icon: (
@@ -605,12 +652,13 @@ export default function Home() {
                 icon: (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 ),
-                title: "Operating Model & Change",
+                title: "Operating Model & Change Management",
                 description: "Define the roles, processes, and ways of working to run data and AI sustainably, then drive adoption through structured change.",
+                href: "/offerings#operating-model",
               },
-            ].map((service, index) => (
+            ] as { icon: React.ReactNode; title: string; description: string; href?: string }[]).map((service, index) => (
               <FadeIn key={service.title} delay={index * 100}>
-                <div className="group bg-white p-10 rounded-2xl border border-gray-100 hover:border-[#3fc1c9]/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full">
+                <div className="group bg-white p-10 rounded-2xl border border-gray-100 hover:border-[#3fc1c9]/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
                   <div className="w-16 h-16 bg-gradient-to-br from-[#3fc1c9]/20 to-[#3fc1c9]/5 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-8 h-8 text-[#3fc1c9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {service.icon}
@@ -619,7 +667,15 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-[#364f6b] mb-4 group-hover:text-[#3fc1c9] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                  <p className="text-gray-600 leading-relaxed flex-1">{service.description}</p>
+                  {service.href && (
+                    <Link
+                      href={service.href}
+                      className="mt-6 inline-flex items-center gap-2 text-[#3fc1c9] font-semibold transition-all group-hover:gap-3"
+                    >
+                      Learn more <span>→</span>
+                    </Link>
+                  )}
                 </div>
               </FadeIn>
             ))}
@@ -729,7 +785,7 @@ export default function Home() {
               <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase mb-4">How We Work and Use AI</p>
               <h2 className="text-4xl md:text-5xl font-bold text-[#364f6b] mb-6">Senior-led. AI-enhanced. Human-verified.</h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                We use purpose-built AI tools to accelerate delivery, not replace expertise. Every output is led by a senior practitioner and reviewed before it reaches you.
+                We use purpose-built AI tools to accelerate delivery, not replace expertise. Every engagement is led by senior practitioners and supported by a cross-functional team spanning data, engineering, risk, QA, and change.
               </p>
             </div>
           </FadeIn>
@@ -755,22 +811,28 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Extended team row */}
-              <div className="flex flex-wrap justify-center gap-10 mb-10">
-                {extendedTeam.map((member, index) => (
-                  <div key={`${member.name}-${index}`} className="flex flex-col items-center">
-                    <div className="w-24 h-24 rounded-full overflow-hidden border-3 border-[#364f6b]/20 shadow-lg mb-3">
-                      <Image
-                        src={member.imageSrc}
-                        alt={member.name}
-                        width={96}
-                        height={96}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="font-semibold text-[#364f6b] text-sm text-center max-w-[120px] leading-tight">{member.name}</div>
-                  </div>
-                ))}
+              {/* Delivery capabilities */}
+              <div className="mt-14 mb-10">
+                <p className="text-center text-sm font-semibold tracking-[0.2em] uppercase text-[#364f6b]/60 mb-8">
+                  Our delivery teams typically include:
+                </p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+                  {deliveryCapabilities.map((cap, index) => (
+                    <FadeIn key={cap.title} delay={index * 60}>
+                      <div className="group flex items-center gap-4 bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:border-[#3fc1c9]/40 hover:shadow-md transition-all duration-300 h-full">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#3fc1c9]/10 flex items-center justify-center group-hover:bg-[#3fc1c9]/15 transition-colors">
+                          <svg className="w-6 h-6 text-[#3fc1c9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            {cap.icon}
+                          </svg>
+                        </div>
+                        <p className="font-semibold text-[#364f6b] leading-tight">{cap.title}</p>
+                      </div>
+                    </FadeIn>
+                  ))}
+                </div>
+                <p className="text-center text-sm text-gray-500 mt-8 italic">
+                  Every output is reviewed by a senior practitioner before it reaches you.
+                </p>
               </div>
 
               {/* "supported by" divider */}
