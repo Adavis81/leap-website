@@ -42,13 +42,13 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
   );
 }
 
-function EngagementChip({ duration, label }: { duration: string; label: string }) {
+function EngagementChip({ duration, label }: { duration: string; label?: string }) {
   return (
     <div className="inline-flex items-center gap-2 bg-[#3fc1c9]/10 text-[#3fc1c9] px-4 py-2 rounded-full text-sm font-semibold">
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
-      <span><strong>{duration}</strong> · {label}</span>
+      <span><strong>{duration}</strong>{label ? ` · ${label}` : ""}</span>
     </div>
   );
 }
@@ -124,6 +124,7 @@ const educationOfferings = [
   {
     title: "AI Governance Training",
     byline: "",
+    duration: "1/2 day to 1 day",
     body: "Executive-level workshops that move AI risk and governance from theory to boardroom-ready action.",
     bullets: [
       "Executive workshop on AI risk management",
@@ -138,6 +139,7 @@ const educationOfferings = [
   {
     title: "AI Hackathon Design & Facilitation",
     byline: "",
+    duration: "A few hours to a few days",
     body: "Turn experimentation into actionable outcomes. We design, run, and synthesize high-impact AI hackathons end to end.",
     bullets: [
       "Challenge themes designed around your workflows",
@@ -153,6 +155,7 @@ const educationOfferings = [
   {
     title: "Function-Centric Training Program",
     byline: "",
+    duration: "1/2 day per function",
     body: "Role-specific AI education tailored to how teams actually work, not generic slideware.",
     bullets: [
       "Tailored sessions by function: finance, operations, sales, HR, legal",
@@ -168,6 +171,7 @@ const educationOfferings = [
   {
     title: "Tool-Centric Training Program",
     byline: "",
+    duration: "1/2 day to 1 day",
     body: "Platform-specific enablement across your AI stack, so teams know when to reach for which tool and how to use it safely.",
     bullets: [
       "Claude, ChatGPT, Copilot: when to use which and why",
@@ -568,6 +572,11 @@ export default function OfferingsPage() {
                         <p className="text-xs font-medium text-[#3fc1c9] mb-3 uppercase tracking-wider">{o.byline}</p>
                       )}
                       <p className="text-gray-600 mb-5">{o.body}</p>
+                      {o.duration && (
+                        <div className="mb-5">
+                          <EngagementChip duration={o.duration} />
+                        </div>
+                      )}
                       <ul className="space-y-2 mt-auto">
                         {o.bullets.map((b) => (
                           <li key={b} className="flex gap-2 text-sm text-gray-700">
