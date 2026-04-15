@@ -754,6 +754,26 @@ export default function Home() {
                         )}
                       </div>
                       <div className="text-[#3fc1c9] font-medium">{member.role}</div>
+                      {(member.email || member.phone) && (
+                        <div className="mt-2 flex flex-col gap-0.5 text-sm text-gray-600">
+                          {member.email && (
+                            <a
+                              href={`mailto:${member.email}`}
+                              className="hover:text-[#3fc1c9] transition-colors"
+                            >
+                              {member.email}
+                            </a>
+                          )}
+                          {member.phone && (
+                            <a
+                              href={`tel:${member.phone.replace(/[^0-9+]/g, "")}`}
+                              className="hover:text-[#3fc1c9] transition-colors"
+                            >
+                              {member.phone}
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                   <p className="text-gray-600 text-lg leading-relaxed">{member.bio}</p>
@@ -810,21 +830,7 @@ export default function Home() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="font-semibold text-[#364f6b] text-sm text-center max-w-[160px] leading-tight mb-2">{index === 0 ? "Data & AI Expert" : "Business, Risk & Compliance Expert"}</div>
-                    <div className="flex flex-col items-center gap-1">
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="text-xs text-gray-500 hover:text-[#3fc1c9] transition-colors"
-                      >
-                        {member.email}
-                      </a>
-                      <a
-                        href={`tel:${member.phone.replace(/[^0-9+]/g, "")}`}
-                        className="text-xs text-gray-500 hover:text-[#3fc1c9] transition-colors"
-                      >
-                        {member.phone}
-                      </a>
-                    </div>
+                    <div className="font-semibold text-[#364f6b] text-sm text-center max-w-[160px] leading-tight">{index === 0 ? "Data & AI Expert" : "Business, Risk & Compliance Expert"}</div>
                   </div>
                 ))}
               </div>
