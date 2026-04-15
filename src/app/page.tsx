@@ -218,6 +218,8 @@ const humanTeam = [
     imageSrc: "/images/adam-davis.png",
     memojiSrc: "/images/Adam.jpeg",
     imageAlt: "Adam Davis",
+    email: "adam@leap-ts.com",
+    phone: "516-526-0890",
     bio:
       "With over 20 years of experience working with asset managers, hedge funds, private equity firms, fund administrators, insurers, and global banks, I lead end-to-end transformations spanning strategy, operating model design, and implementation. My work focuses on modern data platforms, investment data architecture, and AI strategy, implementation, and governance, helping firms unlock value from data while maintaining the controls required in highly regulated environments.",
     quote:
@@ -231,6 +233,8 @@ const humanTeam = [
     imageSrc: "/images/hortense-viard.png",
     memojiSrc: "/images/hortense.jpeg",
     imageAlt: "Hortense Viard",
+    email: "hortense@leap-ts.com",
+    phone: "347-559-9448",
     linkedinUrl: "https://www.linkedin.com/in/hortenseviard/",
     bio:
       "With over 20 years of experience in Financial Services, I work with global banks, insurers, and private equity firms across Europe and the US. I specialize in financial and enterprise risk management, regulatory transformation, and bridging the gap between business and technology. Recent areas of focus include helping organizations manage emerging risks such as ESG and climate change, as well as understanding the impact of AI and Generative AI on risk management frameworks.",
@@ -806,7 +810,21 @@ export default function Home() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="font-semibold text-[#364f6b] text-sm text-center max-w-[160px] leading-tight">{index === 0 ? "Data & AI Expert" : "Business, Risk & Compliance Expert"}</div>
+                    <div className="font-semibold text-[#364f6b] text-sm text-center max-w-[160px] leading-tight mb-2">{index === 0 ? "Data & AI Expert" : "Business, Risk & Compliance Expert"}</div>
+                    <div className="flex flex-col items-center gap-1">
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="text-xs text-gray-500 hover:text-[#3fc1c9] transition-colors"
+                      >
+                        {member.email}
+                      </a>
+                      <a
+                        href={`tel:${member.phone.replace(/[^0-9+]/g, "")}`}
+                        className="text-xs text-gray-500 hover:text-[#3fc1c9] transition-colors"
+                      >
+                        {member.phone}
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
