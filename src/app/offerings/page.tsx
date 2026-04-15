@@ -560,10 +560,13 @@ export default function OfferingsPage() {
                 {educationOfferings.map((o, index) => (
                   <FadeIn key={o.title} delay={index * 100}>
                     <div className="group bg-gray-50 p-8 md:p-10 rounded-2xl border border-gray-100 hover:border-[#3fc1c9]/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
-                      <div className="w-14 h-14 bg-gradient-to-br from-[#3fc1c9]/20 to-[#3fc1c9]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg className="w-7 h-7 text-[#3fc1c9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          {o.icon}
-                        </svg>
+                      <div className="flex items-center justify-between gap-4 mb-6">
+                        <div className="w-14 h-14 bg-gradient-to-br from-[#3fc1c9]/20 to-[#3fc1c9]/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                          <svg className="w-7 h-7 text-[#3fc1c9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            {o.icon}
+                          </svg>
+                        </div>
+                        {o.duration && <EngagementChip duration={o.duration} />}
                       </div>
                       <h4 className="text-xl md:text-2xl font-bold text-[#364f6b] mb-2 group-hover:text-[#3fc1c9] transition-colors">
                         {o.title}
@@ -572,11 +575,6 @@ export default function OfferingsPage() {
                         <p className="text-xs font-medium text-[#3fc1c9] mb-3 uppercase tracking-wider">{o.byline}</p>
                       )}
                       <p className="text-gray-600 mb-5">{o.body}</p>
-                      {o.duration && (
-                        <div className="mb-5">
-                          <EngagementChip duration={o.duration} />
-                        </div>
-                      )}
                       <ul className="space-y-2 mt-auto">
                         {o.bullets.map((b) => (
                           <li key={b} className="flex gap-2 text-sm text-gray-700">
