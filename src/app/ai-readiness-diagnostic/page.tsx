@@ -836,13 +836,13 @@ export default function AIReadinessDiagnosticPage() {
                         <div className="text-gray-400 text-[12.5px]">{person.role}</div>
                         <a
                           href={`mailto:${person.email}`}
-                          className="text-[#3fc1c9] text-[13px] font-mono hover:underline"
+                          className="text-[#3fc1c9] text-[13px] hover:underline"
                         >
                           {person.email}
                         </a>
                         <a
                           href={`tel:${person.phone.replace(/[^0-9+]/g, "")}`}
-                          className="text-gray-300 text-[13px] font-mono hover:text-[#3fc1c9] transition-colors"
+                          className="text-gray-300 text-[13px] hover:text-[#3fc1c9] transition-colors"
                         >
                           {person.phone}
                         </a>
@@ -857,22 +857,23 @@ export default function AIReadinessDiagnosticPage() {
       </section>
 
       {/* ============ FOOTER ============ */}
-      <footer className="bg-[#364f6b] text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <Image
-            src="/images/logo-white.svg"
-            alt="Leap Transformation Services"
-            width={120}
-            height={43}
-          />
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300">
-            <Link href="/" className="hover:text-[#3fc1c9] transition-colors">leap-ts.com</Link>
-            <Link href="/offerings" className="hover:text-[#3fc1c9] transition-colors">Offerings</Link>
-            <Link href="/partners-clients" className="hover:text-[#3fc1c9] transition-colors">Partners &amp; Clients</Link>
+      <footer className="bg-[#364f6b] text-white py-16 px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <Image src="/images/logo-white.svg" alt="Leap Transformation Services" width={140} height={50} />
+            <div className="flex flex-wrap items-center gap-8">
+              <Link href="/#services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
+              <Link href="/offerings" className="text-gray-300 hover:text-white transition-colors">Offerings</Link>
+              <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">About</Link>
+              <Link href="/#how-we-work" className="text-gray-300 hover:text-white transition-colors">How We Work</Link>
+              <Link href="/#why-leap" className="text-gray-300 hover:text-white transition-colors">Why Leap</Link>
+              <Link href="/partners-clients" className="text-gray-300 hover:text-white transition-colors">Partners &amp; Clients</Link>
+              <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors">Get in Touch</Link>
+            </div>
+            <p className="text-gray-400 text-sm">
+              &copy; {new Date().getFullYear()} Leap Transformation Services. All rights reserved.
+            </p>
           </div>
-          <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Leap Transformation Services. All rights reserved.
-          </p>
         </div>
       </footer>
     </div>
