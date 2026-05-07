@@ -377,6 +377,58 @@ export default function OfferingsPage() {
             </div>
           </FadeIn>
 
+          {/* Sub-block A0: AI Readiness Diagnostic */}
+          <FadeIn>
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm mb-10">
+              <div className="bg-gradient-to-r from-[#1d2d44] to-[#364f6b] px-10 md:px-12 py-10 text-white">
+                <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase text-sm mb-3 flex items-center gap-2">
+                  <span className="w-4 h-px bg-[#3fc1c9] inline-block" />
+                  New
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">AI Readiness Diagnostic</h3>
+                <p className="text-lg text-gray-300 max-w-3xl">
+                  A senior-led assessment across ten dimensions of organizational AI absorption — from leadership alignment
+                  and manager fluency to governance and operating model ownership. The diagnostic surfaces where AI is
+                  actually getting stuck inside your firm, and what to do about it in the next ninety days.
+                </p>
+              </div>
+              <div className="p-10 md:p-12">
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-[#3fc1c9] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-sm text-gray-700"><strong>Half-day</strong> executive workshop</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-[#3fc1c9] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span className="text-sm text-gray-700"><strong>10 dimensions</strong>, 5 maturity levels</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-[#3fc1c9] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span className="text-sm text-gray-700"><strong>Executive readout</strong>, 3 pages or fewer</span>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-8">
+                  Most firms have given everyone access to a chatbot and called it AI strategy. The hard half is whether
+                  the firm can absorb what comes next. This diagnostic measures organizational absorption capacity — the
+                  culture, manager support, talent practices, workflow design, and operating model that determine whether
+                  AI investment compounds or disperses.
+                </p>
+                <Link
+                  href="/ai-readiness-diagnostic"
+                  className="inline-flex items-center gap-2 bg-[#3fc1c9] text-white px-6 py-3 rounded-full font-medium hover:bg-[#2ba5ad] transition-all hover:shadow-lg"
+                >
+                  Explore the Diagnostic <span>→</span>
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+
           {/* Sub-block A1: Use Case Prioritization & Roadmap */}
           <FadeIn>
             <div className="bg-white rounded-2xl p-10 md:p-12 border border-gray-100 shadow-sm mb-10">

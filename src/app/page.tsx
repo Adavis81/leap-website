@@ -569,12 +569,12 @@ export default function Home() {
                   >
                     Start a Conversation
                   </a>
-                  <a
-                    href="#services"
-                    className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all"
+                  <Link
+                    href="/ai-readiness-diagnostic"
+                    className="border-2 border-[#3fc1c9]/60 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#3fc1c9]/15 hover:border-[#3fc1c9] transition-all"
                   >
-                    Explore Services
-                  </a>
+                    Take the AI Readiness Diagnostic
+                  </Link>
                 </div>
               </FadeIn>
             </div>
