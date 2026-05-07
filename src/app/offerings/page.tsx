@@ -387,7 +387,7 @@ export default function OfferingsPage() {
                 </p>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">AI Readiness Diagnostic</h3>
                 <p className="text-lg text-gray-300 max-w-3xl">
-                  A senior-led assessment across ten dimensions of organizational AI absorption — from leadership alignment
+                  A senior-led assessment across ten dimensions of organizational AI absorption, from leadership alignment
                   and manager fluency to governance and operating model ownership. The diagnostic surfaces where AI is
                   actually getting stuck inside your firm, and what to do about it in the next ninety days.
                 </p>
@@ -415,7 +415,7 @@ export default function OfferingsPage() {
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   Most firms have given everyone access to a chatbot and called it AI strategy. The hard half is whether
-                  the firm can absorb what comes next. This diagnostic measures organizational absorption capacity — the
+                  the firm can absorb what comes next. This diagnostic measures organizational absorption capacity: the
                   culture, manager support, talent practices, workflow design, and operating model that determine whether
                   AI investment compounds or disperses.
                 </p>

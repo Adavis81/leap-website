@@ -54,7 +54,7 @@ const dimensions = [
     n: "01",
     name: "Leadership Alignment",
     blurb:
-      "A documented executive thesis tied to enterprise strategy, with named accountability — not a delegation to IT.",
+      "A documented executive thesis tied to enterprise strategy, with named accountability, not a delegation to IT.",
     tell: "If we removed every AI tool tomorrow, which three business outcomes would suffer first?",
   },
   {
@@ -62,7 +62,7 @@ const dimensions = [
     name: "Culture & Change Readiness",
     blurb:
       "Active permission to redesign work, not just to use tools as-is. Anchored in real workflows, not generic training.",
-    tell: "When did someone last change how they worked because of AI — and was that change recognized?",
+    tell: "When did someone last change how they worked because of AI, and was that change recognized?",
   },
   {
     n: "03",
@@ -75,7 +75,7 @@ const dimensions = [
     n: "04",
     name: "Talent & Skills",
     blurb:
-      "A current view of which roles are most exposed to AI redesign over the next 18 months — and a plan tied to that view.",
+      "A current view of which roles are most exposed to AI redesign over the next 18 months, with a plan tied to that view.",
     tell: "Which three roles will look most different two years from now, and what are you doing about that today?",
   },
   {
@@ -103,7 +103,7 @@ const dimensions = [
     n: "08",
     name: "AI Tool Adoption",
     blurb:
-      "Selective, role-aware deployment with adoption signals tied to real workflows — not licenses purchased.",
+      "Selective, role-aware deployment with adoption signals tied to real workflows, not licenses purchased.",
     tell: "Of the AI licenses you have purchased, what percentage are actively used each week, and by whom?",
   },
   {
@@ -117,7 +117,7 @@ const dimensions = [
     n: "10",
     name: "Operating Model Ownership",
     blurb:
-      "A named AI operating model — who decides, who builds, who runs, who governs — accepted across business and technology.",
+      "A named AI operating model (who decides, who builds, who runs, who governs) accepted across business and technology.",
     tell: "Who, by name, owns the business outcome of your most important AI initiative?",
   },
 ];
@@ -128,21 +128,21 @@ const levels = [
     name: "Fragmented",
     profile:
       "AI activity exists in pockets. No firm-level thesis. Tooling, governance, and ownership are inconsistent or absent.",
-    move: "Establish an executive AI thesis. Name a single accountable executive for outcomes — not delivery.",
+    move: "Establish an executive AI thesis. Name a single accountable executive for outcomes, not delivery.",
   },
   {
     n: "II",
     name: "Experimenting",
     profile:
       "Visible pilots and a recognized intent to do more. Coordination, value tracking, and operating model are still informal.",
-    move: "Move from pilots to a managed portfolio with named owners. Equip managers explicitly — generic training does not move adoption.",
+    move: "Move from pilots to a managed portfolio with named owners. Equip managers explicitly. Generic training does not move adoption.",
   },
   {
     n: "III",
     name: "Coordinated",
     profile:
       "A defined AI position with named ownership. Adoption is real but uneven across business units. Governance is in place.",
-    move: "Workflow redesign in the lagging functions. Calibrate governance for speed — tier approvals so low-risk use cases ship fast.",
+    move: "Workflow redesign in the lagging functions. Calibrate governance for speed: tier approvals so low-risk use cases ship fast.",
   },
   {
     n: "IV",
@@ -155,7 +155,7 @@ const levels = [
     n: "V",
     name: "AI-ready Operating Model",
     profile:
-      "AI is part of how the firm runs — built into hiring, performance, governance, and business reviews. Not dependent on champions.",
+      "AI is part of how the firm runs. Built into hiring, performance, governance, and business reviews. Not dependent on champions.",
     move: "Shift from adoption to advantage. Identify where AI-enabled work design becomes a competitive moat.",
   },
 ];
@@ -164,7 +164,7 @@ const deploymentModes = [
   {
     label: "Sales conversation",
     duration: "30-45 min",
-    desc: "Walk a leadership team through 5-8 questions live. The conversation itself surfaces the gaps and the disagreements — which are the most useful finding.",
+    desc: "Walk a leadership team through 5-8 questions live. The conversation itself surfaces the gaps and the disagreements, which are the most useful finding.",
   },
   {
     label: "Executive workshop",
@@ -185,7 +185,7 @@ const deliverables = [
   },
   {
     label: "Strengths and blockers",
-    desc: "The three things this organization is meaningfully ahead on, and the three places it is most exposed — ranked by impact, with evidence.",
+    desc: "The three things this organization is meaningfully ahead on, and the three places it is most exposed. Ranked by impact, with evidence.",
   },
   {
     label: "Dimension-level map",
@@ -197,7 +197,7 @@ const deliverables = [
   },
   {
     label: "90-day roadmap",
-    desc: "The structural moves — Align, Prioritize, Operationalize — sequenced so each phase makes the next one easier.",
+    desc: "The structural moves (Align, Prioritize, Operationalize) sequenced so each phase makes the next one easier.",
   },
 ];
 
@@ -325,7 +325,7 @@ export default function AIReadinessDiagnosticPage() {
               <FadeIn delay={200}>
                 <p className="text-lg md:text-xl text-gray-300 max-w-[56ch] leading-relaxed mb-9">
                   A senior-led readiness assessment for asset managers, mid-market banks, insurers, and PE-backed financial firms.
-                  Ten dimensions. Five maturity levels. One executive conversation that surfaces where AI is actually getting stuck —
+                  Ten dimensions. Five maturity levels. One executive conversation that surfaces where AI is actually getting stuck,
                   and what to do about it in the next ninety days.
                 </p>
               </FadeIn>
@@ -353,7 +353,7 @@ export default function AIReadinessDiagnosticPage() {
                   &ldquo;Most firms have given everyone access to a chatbot and called it AI strategy. That is the easy half. The hard half is whether the firm can absorb what comes next.&rdquo;
                 </p>
                 <p className="mt-5 text-sm tracking-wide opacity-60">
-                  — Adam Davis &amp; Hortense Viard, Co-founders
+                  Adam Davis &amp; Hortense Viard, Co-founders
                 </p>
               </aside>
             </FadeIn>
@@ -399,7 +399,7 @@ export default function AIReadinessDiagnosticPage() {
             <FadeIn delay={100}>
               <p className="text-2xl md:text-3xl lg:text-4xl leading-snug font-serif text-[#364f6b]">
                 Tool access is the easy lever.{" "}
-                <em className="text-[#2ba5ad]">Absorption capacity</em> — the culture, manager fluency, talent practices, workflow design, and operating model around the tools — is what separates firms whose AI investment compounds from firms where it disperses.
+                <em className="text-[#2ba5ad]">Absorption capacity</em>, the culture, manager fluency, talent practices, workflow design, and operating model around the tools, is what separates firms whose AI investment compounds from firms where it disperses.
               </p>
             </FadeIn>
 
@@ -413,7 +413,7 @@ export default function AIReadinessDiagnosticPage() {
                 {
                   num: "02",
                   title: "Manager fluency is the throttle.",
-                  body: "Front-line managers who cannot coach AI use are the constraint on adoption — not employees, not infrastructure.",
+                  body: "Front-line managers who cannot coach AI use are the constraint on adoption, not employees, not infrastructure.",
                 },
                 {
                   num: "03",
@@ -463,8 +463,8 @@ export default function AIReadinessDiagnosticPage() {
             <FadeIn delay={100}>
               <p className="text-lg text-gray-600 leading-relaxed">
                 The diagnostic is twenty questions across the ten dimensions below. We publish the dimensions, the
-                signal we look for, and the executive question that surfaces it. The instrument itself — the
-                full question set, rubric, and scoring math — is the proprietary part we run live with you.
+                signal we look for, and the executive question that surfaces it. The instrument itself (the
+                full question set, rubric, and scoring math) is the proprietary part we run live with you.
               </p>
             </FadeIn>
           </div>
@@ -516,7 +516,7 @@ export default function AIReadinessDiagnosticPage() {
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
                 Most mid-size financial services firms we meet sit at Level II or Level III. Very few are at Level IV; almost
-                none at Level V. The level itself is less interesting than the dimension-level pattern that produces it —
+                none at Level V. The level itself is less interesting than the dimension-level pattern that produces it,
                 which is why the readout we leave behind is dimensional, not a single number.
               </p>
             </div>
@@ -557,7 +557,7 @@ export default function AIReadinessDiagnosticPage() {
 
           <FadeIn delay={200}>
             <p className="mt-9 text-[13.5px] text-gray-400 max-w-3xl leading-relaxed">
-              <span className="text-[#3fc1c9] font-mono">Note —</span> we deliberately do not publish the score-to-level math,
+              <span className="text-[#3fc1c9] font-mono">Note:</span> we deliberately do not publish the score-to-level math,
               the per-question rubric, or the question set itself. Those are the parts of the instrument that produce a defensible
               result, and they belong inside the engagement. What we publish is the framework you can use to talk to your own
               leadership team about where you think you sit.
@@ -580,7 +580,7 @@ export default function AIReadinessDiagnosticPage() {
                   Three ways to deploy it.
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  The diagnostic is the same instrument in each mode — what changes is the depth of evidence we
+                  The diagnostic is the same instrument in each mode. What changes is the depth of evidence we
                   collect alongside it. Most engagements start with a workshop and either stop there or convert
                   into a paid readiness assessment with executive interviews and a formal readout.
                 </p>
@@ -721,7 +721,7 @@ export default function AIReadinessDiagnosticPage() {
                     Mid-cap asset manager, 280 staff
                   </div>
                   <div className="text-[11px] uppercase tracking-widest text-gray-400 mt-1.5">
-                    Maturity: Level II — Experimenting
+                    Maturity: Level II, Experimenting
                   </div>
                 </div>
                 <div className="font-mono text-xs text-gray-400">
@@ -754,7 +754,7 @@ export default function AIReadinessDiagnosticPage() {
               {/* Finding */}
               <p className="font-serif text-lg md:text-xl text-[#364f6b] leading-relaxed border-l-2 border-[#3fc1c9] pl-4 my-6">
                 Adoption is concentrated in two desks. Manager-level fluency is the binding constraint, not data, and not
-                governance — though governance will become one inside six months if the use-case pipeline is not actively managed.
+                governance, though governance will become one inside six months if the use-case pipeline is not actively managed.
               </p>
 
               {/* Footer stats */}
