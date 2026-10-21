@@ -670,7 +670,6 @@ function DiagnosticTool() {
           <FadeIn>
             <div>
               <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
                 Run The Screen
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] leading-tight">
@@ -727,7 +726,6 @@ function DiagnosticTool() {
 
               <div>
                 <div className="mb-4 inline-flex items-center gap-2 font-mono text-xs uppercase text-[#2ba5ad]">
-                  <span className="h-px w-4 bg-[#2ba5ad]" />
                   {domains[currentQuestion.domain].number} | {domains[currentQuestion.domain].label}
                 </div>
                 <h3 className="max-w-3xl text-2xl md:text-3xl font-bold leading-tight text-[#364f6b]">
@@ -789,7 +787,6 @@ function DiagnosticTool() {
 
               <div className="mt-7 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                 <p className="flex items-center gap-2 font-mono text-xs uppercase text-gray-400">
-                  <span className="h-px w-4 bg-gray-300" />
                   Unknown is valid, and scored as risk
                 </p>
                 <div className="flex items-center justify-between gap-3 sm:justify-end">
@@ -1003,7 +1000,6 @@ export default function AiDueDiligenceDiagnosticPage() {
             <div>
               <FadeIn>
                 <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#3fc1c9] inline-block" />
                   AI Due Diligence Diagnostic
                 </p>
               </FadeIn>
@@ -1097,7 +1093,6 @@ export default function AiDueDiligenceDiagnosticPage() {
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-              <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
               The Premise
             </p>
           </FadeIn>
@@ -1137,7 +1132,6 @@ export default function AiDueDiligenceDiagnosticPage() {
             <FadeIn>
               <div>
                 <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
                   What We Evaluate
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] leading-tight">
@@ -1198,7 +1192,6 @@ export default function AiDueDiligenceDiagnosticPage() {
             <FadeIn>
               <div>
                 <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
                   How It Is Used
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] leading-tight mb-6">
@@ -1247,7 +1240,6 @@ export default function AiDueDiligenceDiagnosticPage() {
             <FadeIn>
               <div>
                 <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#3fc1c9] inline-block" />
                   Get In Touch
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-5">

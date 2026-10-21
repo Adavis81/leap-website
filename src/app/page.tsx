@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "./components/SiteFooter";
+import LeadCaptureModal from "./components/LeadCaptureModal";
 import { useState, useEffect, useRef } from "react";
 
 // Animation hook for fade-in on scroll
@@ -370,6 +371,7 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [outlineModalOpen, setOutlineModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -585,12 +587,13 @@ export default function Home() {
                   >
                     Start a Conversation
                   </a>
-                  <Link
-                    href="/ai-readiness-diagnostic"
+                  <button
+                    type="button"
+                    onClick={() => setOutlineModalOpen(true)}
                     className="border-2 border-[#3fc1c9]/60 text-white px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-[#3fc1c9]/15 hover:border-[#3fc1c9] transition-all"
                   >
-                    Take the AI Readiness Diagnostic
-                  </Link>
+                    Request the AI Readiness Assessment Outline
+                  </button>
                   <Link
                     href="/ai-due-diligence-diagnostic"
                     className="border-2 border-[#3fc1c9]/60 text-white px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-[#3fc1c9]/15 hover:border-[#3fc1c9] transition-all"
@@ -891,9 +894,7 @@ export default function Home() {
 
               {/* "supported by" divider */}
               <div className="flex items-center gap-4 max-w-md mx-auto mb-10">
-                <div className="flex-1 h-px bg-[#364f6b]/15"></div>
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#364f6b]/40">supported by AI Agents</span>
-                <div className="flex-1 h-px bg-[#364f6b]/15"></div>
               </div>
 
               {/* AI agents - medium row */}
@@ -1132,6 +1133,12 @@ export default function Home() {
 
       {/* Footer */}
       <SiteFooter />
+
+      <LeadCaptureModal
+        isOpen={outlineModalOpen}
+        intent="readiness-assessment-outline"
+        onClose={() => setOutlineModalOpen(false)}
+      />
     </div>
   );
 }

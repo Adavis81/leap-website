@@ -396,7 +396,6 @@ export default function OfferingsPage() {
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm mb-10">
               <div className="bg-gradient-to-r from-[#1d2d44] to-[#364f6b] px-10 md:px-12 py-10 text-white">
                 <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase text-sm mb-3 flex items-center gap-2">
-                  <span className="w-4 h-px bg-[#3fc1c9] inline-block" />
                   New
                 </p>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">AI Readiness Diagnostic</h3>

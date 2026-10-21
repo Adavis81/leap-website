@@ -326,7 +326,6 @@ export default function AIReadinessDiagnosticPage() {
             <div>
               <FadeIn>
                 <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#3fc1c9] inline-block" />
                   AI Readiness Diagnostic
                 </p>
               </FadeIn>
@@ -411,7 +410,6 @@ export default function AIReadinessDiagnosticPage() {
           <FadeIn>
             <div>
               <p className="mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-[#2ba5ad]">
-                <span className="inline-block h-px w-5 bg-[#2ba5ad]" />
                 When To Use This
               </p>
               <h2 className="text-2xl font-bold leading-tight text-[#364f6b] md:text-3xl">
@@ -440,7 +438,6 @@ export default function AIReadinessDiagnosticPage() {
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-              <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
               The Premise
             </p>
           </FadeIn>
@@ -504,7 +501,6 @@ export default function AIReadinessDiagnosticPage() {
             <FadeIn>
               <div>
                 <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
                   What We Measure
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] leading-tight">
@@ -560,7 +556,6 @@ export default function AIReadinessDiagnosticPage() {
           <FadeIn>
             <div className="max-w-3xl mb-14 md:mb-20">
               <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                <span className="w-5 h-px bg-[#3fc1c9] inline-block" />
                 Where Firms Land
               </p>
               <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-5">
@@ -624,7 +619,6 @@ export default function AIReadinessDiagnosticPage() {
             <FadeIn>
               <div>
                 <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
                   How It&apos;s Run
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] leading-tight mb-6">
@@ -684,7 +678,6 @@ export default function AIReadinessDiagnosticPage() {
               <FadeIn>
                 <div>
                   <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                    <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
                     Scoring, Practically
                   </p>
                   <h2 className="text-2xl md:text-3xl font-bold text-[#364f6b] leading-tight">
@@ -743,7 +736,6 @@ export default function AIReadinessDiagnosticPage() {
             <FadeIn>
               <div>
                 <p className="text-[#2ba5ad] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#2ba5ad] inline-block" />
                   What You Walk Away With
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] leading-tight">
@@ -850,7 +842,6 @@ export default function AIReadinessDiagnosticPage() {
             <FadeIn>
               <div>
                 <p className="text-[#3fc1c9] font-semibold tracking-wider uppercase text-sm mb-5 flex items-center gap-3">
-                  <span className="w-5 h-px bg-[#3fc1c9] inline-block" />
                   Get In Touch
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-5">
