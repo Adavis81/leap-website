@@ -80,17 +80,17 @@ const costPillars = [
   {
     title: "Model-Use Case Alignment",
     body: "Audit current and planned AI use cases, benchmark task complexity, and recommend model routing strategies. Use Haiku for extraction, Sonnet for analysis, Opus for complex reasoning. Each step runs on the most cost-efficient model that meets quality thresholds.",
-    metric: "40–60% reduction in API costs",
+    metric: "40-60% reduction in API costs",
   },
   {
     title: "Vendor & Platform Rationalization",
     body: "Catalog all AI vendor contracts, API agreements, and platform licenses across the firm. Identify redundancy where multiple teams pay for overlapping tools and recommend consolidation paths: fewer vendors, shared infrastructure.",
-    metric: "20–30% reduction in redundant spend",
+    metric: "20-30% reduction in redundant spend",
   },
   {
     title: "Data Architecture for AI Efficiency",
     body: "Trace data lineage into AI workflows to map where data is sourced, duplicated, embedded, and stored across initiatives. Recommend shared infrastructure: centralized vector stores, common data prep pipelines, single-source-of-truth architecture.",
-    metric: "15–25% reduction in storage & retrieval costs",
+    metric: "15-25% reduction in storage & retrieval costs",
   },
 ];
 
@@ -364,7 +364,7 @@ export default function OfferingsPage() {
         </div>
       </section>
 
-      {/* Section A — AI Strategy (Prioritization + Cost Optimization) */}
+      {/* Section A - AI Strategy (Prioritization + Cost Optimization) */}
       <section id="ai-strategy" className="py-20 px-6 bg-gray-50 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
@@ -478,7 +478,7 @@ export default function OfferingsPage() {
               <div className="bg-gradient-to-r from-[#364f6b] to-[#4a6785] px-10 md:px-12 py-10 text-white">
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">Agentic AI Cost Optimization</h3>
                 <p className="text-xl text-gray-200">
-                  Reduce AI operating costs <span className="text-[#3fc1c9] font-bold">40–60%</span> while improving governance and performance. Typical payback in under <span className="text-[#3fc1c9] font-bold">3 months</span>.
+                  Reduce AI operating costs <span className="text-[#3fc1c9] font-bold">40-60%</span> while improving governance and performance. Typical payback in under <span className="text-[#3fc1c9] font-bold">3 months</span>.
                 </p>
               </div>
 
@@ -493,7 +493,7 @@ export default function OfferingsPage() {
                 <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 mb-10">
                   <p className="text-sm font-semibold text-[#3fc1c9] uppercase tracking-wider mb-2">The Challenge</p>
                   <p className="text-gray-700 leading-relaxed">
-                    Financial services firms overspend on AI by defaulting to premium models for every task, allowing vendor sprawl across business units, and duplicating data pipelines, compounding costs that erode ROI. 60–80% of AI requests are routine but get routed to premium models.
+                    Financial services firms overspend on AI by defaulting to premium models for every task, allowing vendor sprawl across business units, and duplicating data pipelines, compounding costs that erode ROI. 60-80% of AI requests are routine but get routed to premium models.
                   </p>
                 </div>
 
@@ -533,7 +533,7 @@ export default function OfferingsPage() {
         </div>
       </section>
 
-      {/* Section B — AI Implementation */}
+      {/* Section B - AI Implementation */}
       <section id="ai-implementation" className="py-20 px-6 bg-white scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
@@ -556,7 +556,7 @@ export default function OfferingsPage() {
                 Turn AI strategy into production-ready solutions, from proof of concept through deployment, integration, and ongoing optimization within your existing infrastructure.
               </p>
               <div className="mb-8">
-                <EngagementChip duration="4–6 weeks" label="3–4 use cases" />
+                <EngagementChip duration="4-6 weeks" label="3-4 use cases" />
               </div>
 
               {/* TODO: expand with dedicated Implementation deck content */}
@@ -583,7 +583,7 @@ export default function OfferingsPage() {
         </div>
       </section>
 
-      {/* Section C — Operating Model & Change Management */}
+      {/* Section C - Operating Model & Change Management */}
       <section id="operating-model" className="py-20 px-6 bg-gray-50 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <FadeIn>

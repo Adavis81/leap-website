@@ -790,7 +790,7 @@ export default function Home() {
                   &ldquo;{humanTeam[0].quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center justify-center gap-3 mt-6">
-                  <span className="text-gray-300 text-sm">&mdash; {humanTeam[0].name} &amp; {humanTeam[1].name}, Co-founders</span>
+                  <span className="text-gray-300 text-sm">{humanTeam[0].name} &amp; {humanTeam[1].name}, Co-founders</span>
                 </div>
               </div>
             </div>
