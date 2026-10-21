@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
 import { useEffect, useState } from "react";
 
 type LogoItem = {
@@ -95,7 +96,7 @@ export default function PartnersClientsPage() {
               priority
             />
           </Link>
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <Link
               href="/#services"
               className={`font-medium transition-colors ${
@@ -143,6 +144,14 @@ export default function PartnersClientsPage() {
               }`}
             >
               Partners &amp; Clients
+            </Link>
+            <Link
+              href="/careers"
+              className={`font-medium transition-colors ${
+                scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
+              }`}
+            >
+              Careers
             </Link>
             <Link
               href="/#contact"
@@ -213,6 +222,13 @@ export default function PartnersClientsPage() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Partners &amp; Clients
+              </Link>
+              <Link
+                href="/careers"
+                className="text-[#364f6b] hover:text-[#3fc1c9] transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Careers
               </Link>
               <Link
                 href="/#contact"
@@ -369,34 +385,7 @@ export default function PartnersClientsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#364f6b] text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col items-center gap-8">
-          <Image src="/images/logo-white.svg" alt="Leap Transformation Services" width={120} height={43} />
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            <Link href="/#services" className="text-gray-300 hover:text-white transition-colors text-sm">
-              Services
-            </Link>
-            <Link href="/#about" className="text-gray-300 hover:text-white transition-colors text-sm">
-              About
-            </Link>
-            <Link href="/#how-we-work" className="text-gray-300 hover:text-white transition-colors text-sm">
-              How We Work
-            </Link>
-            <Link href="/#why-leap" className="text-gray-300 hover:text-white transition-colors text-sm">
-              Why Leap
-            </Link>
-            <Link href="/partners-clients" className="text-gray-300 hover:text-white transition-colors text-sm">
-              Partners &amp; Clients
-            </Link>
-            <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors text-sm">
-              Get in Touch
-            </Link>
-          </div>
-          <p className="text-gray-300 text-sm">
-            &copy; {new Date().getFullYear()} Leap Transformation Services. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

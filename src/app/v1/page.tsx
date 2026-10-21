@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
 import { useState } from "react";
 
 export default function Home() {
@@ -516,19 +517,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#364f6b] text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <Image
-            src="/images/logo-white.svg"
-            alt="Leap Transformation Services"
-            width={120}
-            height={43}
-          />
-          <p className="text-gray-300 text-sm">
-            &copy; {new Date().getFullYear()} Leap Transformation Services. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

@@ -36,6 +36,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${siteUrl}/careers`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/careers/senior-ai-implementation-consultant`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 }
-

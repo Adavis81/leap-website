@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
 import { useState, useEffect, useRef } from "react";
+import LeadCaptureModal, { type LeadCaptureIntent } from "../components/LeadCaptureModal";
 
 function useInView() {
   const ref = useRef<HTMLDivElement>(null);
@@ -162,20 +164,31 @@ const levels = [
 
 const deploymentModes = [
   {
-    label: "Sales conversation",
+    label: "Readiness Screen",
     duration: "30-45 min",
-    desc: "Walk a leadership team through 5-8 questions live. The conversation itself surfaces the gaps and the disagreements, which are the most useful finding.",
+    desc: "A short fit conversation to identify whether the full diagnostic is warranted and where AI adoption appears most stuck.",
   },
   {
-    label: "Executive workshop",
+    label: "Executive Diagnostic Workshop",
     duration: "Half-day",
-    desc: "The full assessment with the leadership team in the room. Score together; the variance on scores is the alignment finding worth capturing.",
+    badge: "Fast alignment",
+    desc: "A focused workshop with the leadership team in the room, full instrument, scoring, disagreement surfaced, and initial findings captured.",
   },
   {
-    label: "Engagement kickoff",
+    label: "Readiness Assessment",
     duration: "1-2 weeks",
-    desc: "The diagnostic as the baseline output of a paid readiness assessment. Includes interviews, the workshop, and the formal executive summary.",
+    badge: "Board-ready path",
+    recommended: true,
+    desc: "The richer engagement: interviews, workshop facilitation, evidence review, executive readout, and a 90-day roadmap that can stand up in front of the board.",
   },
+];
+
+const readinessTriggers = [
+  "AI pilots are not scaling beyond isolated teams.",
+  "License adoption is uneven or hard to measure.",
+  "The board is asking for a clearer AI ROI story.",
+  "Managers are unsure how to coach AI-enabled work.",
+  "Governance is slowing useful experimentation.",
 ];
 
 const deliverables = [
@@ -221,6 +234,13 @@ const mockBars = [
 
 export default function AIReadinessDiagnosticPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [leadModalOpen, setLeadModalOpen] = useState(false);
+  const [leadIntent, setLeadIntent] = useState<LeadCaptureIntent>("readiness-fit-call");
+
+  const openLeadModal = (intent: LeadCaptureIntent) => {
+    setLeadIntent(intent);
+    setLeadModalOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -312,48 +332,46 @@ export default function AIReadinessDiagnosticPage() {
               </FadeIn>
               <FadeIn delay={100}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-7">
-                  The reason AI stalls inside your firm is rarely{" "}
-                  <span className="relative inline-block opacity-55">
-                    tool access
-                    <span className="absolute left-[-2%] right-[-2%] top-[56%] h-[0.08em] bg-current -rotate-[2deg]" />
-                  </span>
-                  .<br />
-                  It is{" "}
-                  <span className="text-[#3fc1c9]">organizational absorption</span>.
+                  Find where AI adoption is stalling{" "}
+                  <span className="text-[#3fc1c9]">before you spend more on tools</span>.
                 </h1>
               </FadeIn>
               <FadeIn delay={200}>
                 <p className="text-lg md:text-xl text-gray-300 max-w-[56ch] leading-relaxed mb-9">
-                  A senior-led readiness assessment for asset managers, mid-market banks, insurers, and PE-backed financial firms.
-                  Ten dimensions. Five maturity levels. One executive conversation that surfaces where AI is actually getting stuck,
-                  and what to do about it in the next ninety days.
+                  A senior-led diagnostic and readiness assessment for asset managers, banks,
+                  insurers, and Private Equity firms. Leap scores readiness across 10 dimensions
+                  and turns the findings into a board-ready readout and 90-day action plan.
                 </p>
               </FadeIn>
               <FadeIn delay={300}>
                 <div className="flex flex-wrap gap-4">
-                  <Link
-                    href="/#contact"
+                  <button
+                    type="button"
+                    onClick={() => openLeadModal("readiness-fit-call")}
                     className="inline-flex items-center gap-2.5 bg-[#3fc1c9] text-[#0c1a2b] px-6 py-3.5 rounded-full font-medium hover:bg-[#5cd1d8] transition-colors"
                   >
-                    Book the diagnostic <span>→</span>
-                  </Link>
-                  <a
-                    href="#dimensions"
+                    Schedule a 30-minute readiness fit call <span>→</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => openLeadModal("readiness-assessment-outline")}
                     className="inline-flex items-center gap-2.5 border border-white/20 text-white px-6 py-3.5 rounded-full font-medium hover:border-white/40 transition-colors"
                   >
-                    See what we measure
-                  </a>
+                    Request the readiness assessment outline
+                  </button>
                 </div>
               </FadeIn>
             </div>
 
             <FadeIn delay={350}>
               <aside>
-                <p className="text-xl md:text-2xl leading-relaxed italic opacity-90 font-serif">
-                  &ldquo;Most firms have given everyone access to a chatbot and called it AI strategy. That is the easy half. The hard half is whether the firm can absorb what comes next.&rdquo;
+                <p className="mb-5 text-sm font-semibold uppercase tracking-wider text-[#3fc1c9]">
+                  Leap point of view
                 </p>
-                <p className="mt-5 text-sm tracking-wide opacity-60">
-                  Adam Davis &amp; Hortense Viard, Co-founders
+                <p className="text-xl md:text-2xl leading-relaxed opacity-95 font-serif">
+                  Many firms have treated AI access as progress. The harder question is whether
+                  leaders, managers, workflows, and governance can absorb AI into how the firm
+                  actually operates.
                 </p>
               </aside>
             </FadeIn>
@@ -363,15 +381,17 @@ export default function AIReadinessDiagnosticPage() {
             <div className="h-px bg-white/10 mt-14 mb-7" />
             <div className="grid grid-cols-2 md:grid-cols-4">
               {[
-                { label: "Format", value: "Half-day workshop" },
+                { label: "Format", value: "Workshop or assessment" },
                 { label: "Audience", value: "Executive team, in the room" },
-                { label: "Output", value: "Executive readout, \u2264 3 pages" },
+                { label: "Output", value: "Board-ready readout" },
                 { label: "Built for", value: "Mid-size FS firms" },
               ].map((item, i) => (
                 <div
                   key={item.label}
                   className={`py-4 pr-5 ${
-                    i > 0 ? "pl-5 border-l border-white/10" : ""
+                    i % 2 === 1 ? "pl-5 border-l border-white/10" : ""
+                  } ${
+                    i > 0 ? "md:pl-5 md:border-l md:border-white/10" : ""
                   }`}
                 >
                   <div className="text-[11px] uppercase tracking-widest text-gray-400 mb-1.5">
@@ -379,6 +399,36 @@ export default function AIReadinessDiagnosticPage() {
                   </div>
                   <div className="text-[15px] font-medium">{item.value}</div>
                 </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ============ WHEN TO USE THIS ============ */}
+      <section className="border-b border-gray-100 bg-white px-6 py-12 md:px-8">
+        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.42fr_1fr] md:gap-12">
+          <FadeIn>
+            <div>
+              <p className="mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-[#2ba5ad]">
+                <span className="inline-block h-px w-5 bg-[#2ba5ad]" />
+                When To Use This
+              </p>
+              <h2 className="text-2xl font-bold leading-tight text-[#364f6b] md:text-3xl">
+                Use the diagnostic when AI activity is visible but value is still hard to prove.
+              </h2>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={100}>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {readinessTriggers.map((trigger) => (
+                <p
+                  key={trigger}
+                  className="border-l-2 border-[#3fc1c9] pl-4 text-[15px] leading-relaxed text-gray-600"
+                >
+                  {trigger}
+                </p>
               ))}
             </div>
           </FadeIn>
@@ -398,8 +448,10 @@ export default function AIReadinessDiagnosticPage() {
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16">
             <FadeIn delay={100}>
               <p className="text-2xl md:text-3xl lg:text-4xl leading-snug font-serif text-[#364f6b]">
-                Tool access is the easy lever.{" "}
-                <em className="text-[#2ba5ad]">Absorption capacity</em>, the culture, manager fluency, talent practices, workflow design, and operating model around the tools, is what separates firms whose AI investment compounds from firms where it disperses.
+                Access creates activity.{" "}
+                <em className="text-[#2ba5ad]">Readiness creates operating value.</em>{" "}
+                The diagnostic tests whether the firm has the leadership alignment, manager fluency,
+                workflow design, and operating model to absorb AI into the way work actually gets done.
               </p>
             </FadeIn>
 
@@ -407,8 +459,8 @@ export default function AIReadinessDiagnosticPage() {
               {[
                 {
                   num: "01",
-                  title: "Licenses are not adoption.",
-                  body: "The firms with the highest AI license penetration are not the firms with the highest measurable AI value. We see the gap on every engagement.",
+                  title: "Activity is not adoption.",
+                  body: "We see this gap repeatedly in mid-size financial services firms: high tool availability, uneven behavior change, and limited measurable value.",
                 },
                 {
                   num: "02",
@@ -462,9 +514,9 @@ export default function AIReadinessDiagnosticPage() {
             </FadeIn>
             <FadeIn delay={100}>
               <p className="text-lg text-gray-600 leading-relaxed">
-                The diagnostic is twenty questions across the ten dimensions below. We publish the dimensions, the
-                signal we look for, and the executive question that surfaces it. The instrument itself (the
-                full question set, rubric, and scoring math) is the proprietary part we run live with you.
+                The diagnostic is twenty questions across the ten dimensions below. We publish the
+                framework. The full question set, scoring rubric, and facilitation method are part
+                of the engagement.
               </p>
             </FadeIn>
           </div>
@@ -557,10 +609,9 @@ export default function AIReadinessDiagnosticPage() {
 
           <FadeIn delay={200}>
             <p className="mt-9 text-[13.5px] text-gray-400 max-w-3xl leading-relaxed">
-              <span className="text-[#3fc1c9] font-mono">Note:</span> we deliberately do not publish the score-to-level math,
-              the per-question rubric, or the question set itself. Those are the parts of the instrument that produce a defensible
-              result, and they belong inside the engagement. What we publish is the framework you can use to talk to your own
-              leadership team about where you think you sit.
+              <span className="text-[#3fc1c9] font-mono">Note:</span> we publish the framework, not
+              the scoring rubric. The score-to-level math and facilitation method are part of the
+              engagement because they produce the defensible result.
             </p>
           </FadeIn>
         </div>
@@ -577,12 +628,16 @@ export default function AIReadinessDiagnosticPage() {
                   How It&apos;s Run
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#364f6b] leading-tight mb-6">
-                  Three ways to deploy it.
+                  Choose the right level of evidence.
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  The diagnostic is the same instrument in each mode. What changes is the depth of evidence we
-                  collect alongside it. Most engagements start with a workshop and either stop there or convert
-                  into a paid readiness assessment with executive interviews and a formal readout.
+                  Use the short screen for fit, the workshop for fast leadership alignment, and the
+                  1-2 week assessment when the board, executive committee, or transformation sponsor
+                  needs an evidence-backed readout and roadmap.
+                </p>
+                <p className="mt-6 border-l-2 border-[#3fc1c9] pl-4 text-[15px] leading-relaxed text-gray-600">
+                  Best with CEO/COO, CIO or CTO, Risk/Compliance, HR/Talent, and 2-3 business
+                  leaders who own high-value workflows.
                 </p>
               </div>
             </FadeIn>
@@ -592,7 +647,11 @@ export default function AIReadinessDiagnosticPage() {
                 {deploymentModes.map((m, i) => (
                   <div
                     key={m.label}
-                    className="grid grid-cols-[32px_1fr] gap-5 pb-6 border-b border-gray-200 last:border-b-0"
+                    className={`grid grid-cols-[32px_1fr] gap-5 border-b border-gray-200 pb-6 last:border-b-0 ${
+                      m.recommended
+                        ? "rounded-lg border border-[#3fc1c9]/30 bg-[#ecfbfc] p-5 shadow-[0_16px_40px_-34px_rgba(29,45,68,0.45)]"
+                        : ""
+                    }`}
                   >
                     <span className="font-serif text-3xl text-[#2ba5ad] leading-none">
                       {["i.", "ii.", "iii."][i]}
@@ -603,6 +662,11 @@ export default function AIReadinessDiagnosticPage() {
                         <span className="ml-2 text-[11px] uppercase tracking-widest text-[#2ba5ad] font-medium">
                           {m.duration}
                         </span>
+                        {m.badge ? (
+                          <span className="ml-2 rounded-full border border-[#3fc1c9]/50 px-2 py-0.5 text-[10px] uppercase tracking-widest text-[#2ba5ad]">
+                            {m.badge}
+                          </span>
+                        ) : null}
                       </h4>
                       <p className="text-[15px] text-gray-600 leading-relaxed mt-1.5">
                         {m.desc}
@@ -790,18 +854,28 @@ export default function AIReadinessDiagnosticPage() {
                   Get In Touch
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-5">
-                  Run the diagnostic with your leadership team.
+                  Schedule a 30-minute readiness fit call.
                 </h2>
                 <p className="text-gray-300 leading-relaxed max-w-[50ch]">
-                  Half a day, in the room with your executive team. We bring the instrument and the moderator;
-                  you bring the leaders whose disagreement actually matters. You leave with a readout your board will read.
+                  We will help confirm the right path: a fast workshop for alignment or a deeper
+                  readiness assessment with interviews, evidence review, and a board-ready roadmap.
                 </p>
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2.5 bg-[#3fc1c9] text-[#0c1a2b] px-6 py-3.5 rounded-full font-medium hover:bg-[#5cd1d8] transition-colors mt-7"
-                >
-                  Start the conversation <span>→</span>
-                </Link>
+                <div className="mt-7 flex flex-wrap gap-4">
+                  <button
+                    type="button"
+                    onClick={() => openLeadModal("readiness-fit-call")}
+                    className="inline-flex items-center gap-2.5 bg-[#3fc1c9] text-[#0c1a2b] px-6 py-3.5 rounded-full font-medium hover:bg-[#5cd1d8] transition-colors"
+                  >
+                    Schedule a 30-minute readiness fit call <span>→</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => openLeadModal("readiness-assessment-outline")}
+                    className="inline-flex items-center gap-2.5 border border-white/20 px-6 py-3.5 rounded-full font-medium text-white transition-colors hover:border-white/40"
+                  >
+                    Request the readiness assessment outline
+                  </button>
+                </div>
               </div>
             </FadeIn>
 
@@ -857,25 +931,13 @@ export default function AIReadinessDiagnosticPage() {
       </section>
 
       {/* ============ FOOTER ============ */}
-      <footer className="bg-[#364f6b] text-white py-16 px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <Image src="/images/logo-white.svg" alt="Leap Transformation Services" width={140} height={50} />
-            <div className="flex flex-wrap items-center gap-8">
-              <Link href="/#services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
-              <Link href="/offerings" className="text-gray-300 hover:text-white transition-colors">Offerings</Link>
-              <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-              <Link href="/#how-we-work" className="text-gray-300 hover:text-white transition-colors">How We Work</Link>
-              <Link href="/#why-leap" className="text-gray-300 hover:text-white transition-colors">Why Leap</Link>
-              <Link href="/partners-clients" className="text-gray-300 hover:text-white transition-colors">Partners &amp; Clients</Link>
-              <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors">Get in Touch</Link>
-            </div>
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Leap Transformation Services. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
+
+      <LeadCaptureModal
+        isOpen={leadModalOpen}
+        intent={leadIntent}
+        onClose={() => setLeadModalOpen(false)}
+      />
     </div>
   );
 }

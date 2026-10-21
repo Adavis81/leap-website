@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import SiteFooter from "./components/SiteFooter";
 import { useState, useEffect, useRef } from "react";
 
 // Animation hook for fade-in on scroll
@@ -413,7 +414,7 @@ export default function Home() {
               priority
             />
           </Link>
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <a
               href="#services"
               className={`font-medium transition-colors ${
@@ -461,6 +462,14 @@ export default function Home() {
               }`}
             >
               Partners &amp; Clients
+            </Link>
+            <Link
+              href="/careers"
+              className={`font-medium transition-colors ${
+                scrolled ? "text-[#364f6b] hover:text-[#3fc1c9]" : "text-white/90 hover:text-white"
+              }`}
+            >
+              Careers
             </Link>
             <a
               href="#contact"
@@ -521,6 +530,13 @@ export default function Home() {
               >
                 Partners &amp; Clients
               </Link>
+              <Link
+                href="/careers"
+                className="text-[#364f6b] font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Careers
+              </Link>
               <a
                 href="#contact"
                 className="bg-[#3fc1c9] text-white px-6 py-3 rounded-full font-medium text-center"
@@ -562,18 +578,24 @@ export default function Home() {
                 </p>
               </FadeIn>
               <FadeIn delay={300}>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center lg:justify-start">
                   <a
                     href="#contact"
-                    className="bg-[#3fc1c9] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#2ba5ad] transition-all hover:shadow-xl hover:scale-105"
+                    className="bg-[#3fc1c9] text-white px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-[#2ba5ad] transition-all hover:shadow-xl hover:scale-105"
                   >
                     Start a Conversation
                   </a>
                   <Link
                     href="/ai-readiness-diagnostic"
-                    className="border-2 border-[#3fc1c9]/60 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#3fc1c9]/15 hover:border-[#3fc1c9] transition-all"
+                    className="border-2 border-[#3fc1c9]/60 text-white px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-[#3fc1c9]/15 hover:border-[#3fc1c9] transition-all"
                   >
                     Take the AI Readiness Diagnostic
+                  </Link>
+                  <Link
+                    href="/ai-due-diligence-diagnostic"
+                    className="border-2 border-[#3fc1c9]/60 text-white px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-[#3fc1c9]/15 hover:border-[#3fc1c9] transition-all"
+                  >
+                    Take the PE AI Due Diligence Diagnostic
                   </Link>
                 </div>
               </FadeIn>
@@ -659,6 +681,14 @@ export default function Home() {
                 title: "Operating Model & Change Management",
                 description: "Define the roles, processes, and ways of working to run data and AI sustainably, then drive adoption through structured change.",
                 href: "/offerings#operating-model",
+              },
+              {
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253" />
+                ),
+                title: "Private Equity AI Playbook",
+                description: "A PE-focused playbook for screening target-company AI risk, pressure-testing management claims, and identifying post-close AI value creation opportunities.",
+                href: "/ai-due-diligence-diagnostic",
               },
             ] as { icon: React.ReactNode; title: string; description: string; href?: string }[]).map((service, index) => (
               <FadeIn key={service.title} delay={index * 100}>
@@ -1101,24 +1131,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#364f6b] text-white py-16 px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <Image src="/images/logo-white.svg" alt="Leap Transformation Services" width={140} height={50} />
-            <div className="flex items-center gap-8">
-              <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
-              <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
-              <a href="#how-we-work" className="text-gray-300 hover:text-white transition-colors">How We Work</a>
-              <a href="#why-leap" className="text-gray-300 hover:text-white transition-colors">Why Leap</a>
-              <Link href="/partners-clients" className="text-gray-300 hover:text-white transition-colors">Partners &amp; Clients</Link>
-              <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Get in Touch</a>
-            </div>
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Leap Transformation Services. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
